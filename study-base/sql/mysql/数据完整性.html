@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL的完整性 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.97121cf9.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/74.251ae369.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.f5eb5395.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.128e7641.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.9df64f34.js"><link rel="prefetch" href="/study-base/assets/js/15.65e549f6.js"><link rel="prefetch" href="/study-base/assets/js/16.745ce61d.js"><link rel="prefetch" href="/study-base/assets/js/17.42fea5da.js"><link rel="prefetch" href="/study-base/assets/js/18.c7067d2b.js"><link rel="prefetch" href="/study-base/assets/js/19.11100cb3.js"><link rel="prefetch" href="/study-base/assets/js/20.450ab4d3.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.120496b1.js"><link rel="prefetch" href="/study-base/assets/js/23.0af2de99.js"><link rel="prefetch" href="/study-base/assets/js/24.caacb099.js"><link rel="prefetch" href="/study-base/assets/js/25.81315ac3.js"><link rel="prefetch" href="/study-base/assets/js/26.ad384110.js"><link rel="prefetch" href="/study-base/assets/js/27.ef47f2b2.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.354e4186.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.7699a97a.js"><link rel="prefetch" href="/study-base/assets/js/32.0ee92396.js"><link rel="prefetch" href="/study-base/assets/js/33.26431533.js"><link rel="prefetch" href="/study-base/assets/js/34.01cdc02d.js"><link rel="prefetch" href="/study-base/assets/js/35.82a1b097.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.937bc89f.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.9b086dc7.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/44.0cf67f2b.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.faaff064.js"><link rel="prefetch" href="/study-base/assets/js/49.f41fa857.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.22fcc890.js"><link rel="prefetch" href="/study-base/assets/js/51.5a69d3d4.js"><link rel="prefetch" href="/study-base/assets/js/52.90d9eb96.js"><link rel="prefetch" href="/study-base/assets/js/53.c185379f.js"><link rel="prefetch" href="/study-base/assets/js/54.6b5bf154.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.29929119.js"><link rel="prefetch" href="/study-base/assets/js/57.cd2f97fd.js"><link rel="prefetch" href="/study-base/assets/js/58.0e9f0437.js"><link rel="prefetch" href="/study-base/assets/js/59.67d22fe9.js"><link rel="prefetch" href="/study-base/assets/js/6.79afe6eb.js"><link rel="prefetch" href="/study-base/assets/js/60.5d17c5cc.js"><link rel="prefetch" href="/study-base/assets/js/61.b42684ab.js"><link rel="prefetch" href="/study-base/assets/js/62.4975433d.js"><link rel="prefetch" href="/study-base/assets/js/63.e4fa59ab.js"><link rel="prefetch" href="/study-base/assets/js/64.86cb3f77.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.275c4f0c.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.43281203.js"><link rel="prefetch" href="/study-base/assets/js/69.fb20dd41.js"><link rel="prefetch" href="/study-base/assets/js/7.84d6f6d3.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.621aafab.js"><link rel="prefetch" href="/study-base/assets/js/72.c65c6544.js"><link rel="prefetch" href="/study-base/assets/js/73.809147c2.js"><link rel="prefetch" href="/study-base/assets/js/75.64bf8be2.js"><link rel="prefetch" href="/study-base/assets/js/76.425e7c7a.js"><link rel="prefetch" href="/study-base/assets/js/77.dc586556.js"><link rel="prefetch" href="/study-base/assets/js/78.c0c7ce70.js"><link rel="prefetch" href="/study-base/assets/js/79.93cba4fc.js"><link rel="prefetch" href="/study-base/assets/js/8.0025d786.js"><link rel="prefetch" href="/study-base/assets/js/80.73106b4f.js"><link rel="prefetch" href="/study-base/assets/js/81.dc3c5873.js"><link rel="prefetch" href="/study-base/assets/js/82.018d68f0.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.5d08aa29.js"><link rel="prefetch" href="/study-base/assets/js/85.f95a2bd9.js"><link rel="prefetch" href="/study-base/assets/js/86.50e0f517.js"><link rel="prefetch" href="/study-base/assets/js/87.6ae42b60.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link router-link-active">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link router-link-active">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/sql/mysql/" aria-current="page" class="sidebar-link">MySQL数据库</a></li><li><a href="/study-base/sql/mysql/crud.html" class="sidebar-link">数据库CRUD操作</a></li><li><a href="/study-base/sql/mysql/class.html" class="sidebar-link">数据库中的数据类型</a></li><li><a href="/study-base/sql/mysql/数据完整性.html" class="active sidebar-link">MySQL的完整性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#实体完整性" class="sidebar-link">实体完整性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#什么是实体完整性？" class="sidebar-link">什么是实体完整性？</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#如何保证实体完整性？" class="sidebar-link">如何保证实体完整性？</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#实体完整性的约束类型" class="sidebar-link">实体完整性的约束类型</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#域完整性" class="sidebar-link">域完整性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#如何保证域的完整性？" class="sidebar-link">如何保证域的完整性？</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#参照完整性" class="sidebar-link">参照完整性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#为什么要创建多张表" class="sidebar-link">为什么要创建多张表</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#什么时候出现冗余数据" class="sidebar-link">什么时候出现冗余数据</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#如何保证参照完整性" class="sidebar-link">如何保证参照完整性</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/数据完整性.html#什么是外键" class="sidebar-link">什么是外键</a></li></ul></li></ul></li><li><a href="/study-base/sql/mysql/高级查询.html" class="sidebar-link">MySQL高级查询</a></li><li><a href="/study-base/sql/mysql/事务.html" class="sidebar-link">数据库事务操作</a></li><li><a href="/study-base/sql/mysql/视图.html" class="sidebar-link">数据库视图</a></li><li><a href="/study-base/sql/mysql/存储过程和函数.html" class="sidebar-link">存储过程和函数</a></li><li><a href="/study-base/sql/mysql/索引.html" class="sidebar-link">索引的使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql的完整性"><a href="#mysql的完整性" class="header-anchor">#</a> MySQL的完整性</h1> <p>保证存储到数据库中的数据都是正确的。</p> <ul><li><p>如何保证数据的完整性：</p> <ul><li><p>数据完整性的分类：试题完整性、域完整性、参照完整性</p></li> <li><p>无论哪种完整性都是在创建表时给表添加约束即可</p></li></ul></li></ul> <h2 id="实体完整性"><a href="#实体完整性" class="header-anchor">#</a> 实体完整性</h2> <h3 id="什么是实体完整性？"><a href="#什么是实体完整性？" class="header-anchor">#</a> 什么是实体完整性？</h3> <p>表中的一行数据就是一行实体</p> <h3 id="如何保证实体完整性？"><a href="#如何保证实体完整性？" class="header-anchor">#</a> 如何保证实体完整性？</h3> <p>保证实体完整性就是保证每一行数据的唯一性</p> <h3 id="实体完整性的约束类型"><a href="#实体完整性的约束类型" class="header-anchor">#</a> 实体完整性的约束类型</h3> <ul><li><p>主键约束 （primary key）</p></li> <li><p>唯一约束 （unique）</p></li> <li><p>自动增长列 （auto_increment）</p></li></ul> <h4 id="主键约束"><a href="#主键约束" class="header-anchor">#</a> 主键约束</h4> <p>主键用于唯一标识表中的每一条数据，和现实生活中的身份证很像</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><ul><li>特征：</li></ul> <ol><li>如果将某一个字段设置成了主键，那么这个字段的取值就不能重复了</li> <li>如果将某一个字段设置成了主键，那么这个字段的取值就不能为NULL</li> <li>一张表中只能有一个主键，不能出现多个主键</li> <li>我们除了可以在字段的数据类型后面添加primary key，将这个字段 变成主键以外
+还可以通过在最后面牺牲primary key(字段名称)的方式来指定主键</li></ol> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>    
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="联合主键"><a href="#联合主键" class="header-anchor">#</a> 联合主键</h4> <p>我们通过将表中的某个永远不重复的字段设置为主键，从而达到保存每一行数据的唯一性（实体完整性）
+但是在企业开发中有时候可能找不到不重复的字段，此时我们还可以通过联合主键的方式来保证每一行数据的唯一性
+联合主键就是同事将多个字段作为一个主键来使用</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    age <span class="token keyword">tinyint</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <ul><li><p>联合主键并不是添加多个主键，而是将多个字段的值作为主键来使用</p></li> <li><p>也就是过去指定id为主键，那么id的取值不能重复</p></li> <li><p>而现在如果我们指定name和age为主键,那么name+age的值不能重复</p></li></ul></div> <h4 id="唯一约束-unique"><a href="#唯一约束-unique" class="header-anchor">#</a> 唯一约束(unique)</h4> <p>唯一约束用于保证某个字段的值永远不重复</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">unique</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><ul><li><p>和主键的异同：</p> <ul><li>唯一约束和主键约束一样，被约束的字段的取值都不能重复</li> <li>主键在一张表中只能有一个，而唯一约束在一张表中可以有多个</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>    <span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+        id <span class="token keyword">int</span> <span class="token keyword">unique</span><span class="token punctuation">,</span>
+        name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token keyword">unique</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>主键的取值不能为NULL，而唯一约束的取值可以是NULL</li></ul></li></ul> <h4 id="自动增长约束-auto-increment"><a href="#自动增长约束-auto-increment" class="header-anchor">#</a> 自动增长约束(auto_increment)</h4> <p>自动增长约束的作用是让某个字段的取值从1开始递增，从而保证实体完整性</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><ul><li><p>如果某个字段是自动增长的，那么这个字段必须是主键才可以</p></li> <li><p>如果仅仅是主键，那么取值不呢那个为NULL，如果主键是自增长的，那么主键可以传值NULL或者DEFAULT</p></li> <li><p>在企业开发中我们如何选择主键：</p> <ul><li><p>最少性：能用一个字段作为主键，就不要使用多个字段</p></li> <li><p>稳定性：能用不被操作（修改）的字段作为主键，就不要使用被操作的字段作为主键</p></li> <li><p>一般情况下我们会定义一个名称叫做id的字段，并且这个字段是整型的，并且这个字段是自动增长的来作为主键</p></li></ul></li></ul> <h4 id="修改约束"><a href="#修改约束" class="header-anchor">#</a> 修改约束</h4> <ol><li>修改主键约束</li></ol> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>字段名称<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> person <span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name vachar<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> person <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><ol start="2"><li>修改唯一约束</li></ol> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">unique</span><span class="token punctuation">(</span>字段名称<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> person <span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name vachar<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> person <span class="token keyword">add</span> <span class="token keyword">unique</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><ol start="3"><li>自增长约束</li></ol> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> 字段名称 字段类型 <span class="token keyword">auto_increment</span><span class="token punctuation">;</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> person <span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># 需要先设置主键</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> person <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 再设置自增</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> person <span class="token keyword">modify</span> id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="域完整性"><a href="#域完整性" class="header-anchor">#</a> 域完整性</h2> <p>一行数据中的每个单元格都是一个域</p> <h3 id="如何保证域的完整性？"><a href="#如何保证域的完整性？" class="header-anchor">#</a> 如何保证域的完整性？</h3> <p>保证单元格数据的正确性，即是保证域的完整性</p> <ul><li><p>正确使用数据类型</p> <ul><li>人类的年龄不可能超过255岁，而且不能是负数，所以我们可以使用 tinyint unsigned</li> <li>人的性别只能是男、女，所以可以使用枚举类型</li> <li>要存储比较多的文字，为了保证不超出每一行最大的存储限制，我们可以使用大文本类型</li></ul></li> <li><p>使用非空约束（not null）</p></li> <li><p>使用默认值约束（default）</p></li></ul> <p>示例：</p> <ul><li>非空约束</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><ul><li>默认值约束</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> person<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token string">'test'</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果传入传入的是 null 则还是NULL，不会使用默认值</p> <p>insert into person values(1,default);</p></div> <h2 id="参照完整性"><a href="#参照完整性" class="header-anchor">#</a> 参照完整性</h2> <p>又称为引用完整性，主要用于保证多表之间引用关系正确性。</p> <h3 id="为什么要创建多张表"><a href="#为什么要创建多张表" class="header-anchor">#</a> 为什么要创建多张表</h3> <p>如果将所有的数据都放到一张表中，会出现大量冗余数据，所以为了降低数据库的体积，提升数据库的效率，我们需要根据自身需求对表进行拆分</p> <h3 id="什么时候出现冗余数据"><a href="#什么时候出现冗余数据" class="header-anchor">#</a> 什么时候出现冗余数据</h3> <h4 id="mysql中的表的对应关系："><a href="#mysql中的表的对应关系：" class="header-anchor">#</a> mysql中的表的对应关系：</h4> <h5 id="一对一"><a href="#一对一" class="header-anchor">#</a> 一对一</h5> <p>一般不会对表进行拆分</p> <h5 id="一对多（需拆分表）"><a href="#一对多（需拆分表）" class="header-anchor">#</a> 一对多（需拆分表）</h5> <p>需要拆分成两张表关联</p> <ul><li><p>一个班有多个学生</p></li> <li><p>一个学生有多项成绩</p></li></ul> <h5 id="多对多（需拆分表）"><a href="#多对多（需拆分表）" class="header-anchor">#</a> 多对多（需拆分表）</h5> <p>需要通过三张表来进行关联</p> <ul><li><p>一个学生有多个老师</p></li> <li><p>一个老师有多个学生</p></li></ul> <h3 id="如何保证参照完整性"><a href="#如何保证参照完整性" class="header-anchor">#</a> 如何保证参照完整性</h3> <p>默认情况下表与表之间是独立存在的，不会互相影响
+也正是因为如此，默认情况下也不会检查表与表之间的依赖关系
+所以为了保证表与表之间的参照完整性，我们可以通过<code>外键</code>来保证参照完整性</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> stu<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    gender <span class="token keyword">enum</span><span class="token punctuation">(</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token string">'妖'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> grade<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    km <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    score <span class="token keyword">double</span><span class="token punctuation">,</span>
+    uid <span class="token keyword">int</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre></div><h3 id="什么是外键"><a href="#什么是外键" class="header-anchor">#</a> 什么是外键</h3> <p>如果一张表中有一个字段指向另一张表中的主键，就将该字段叫做外键。</p> <p><code>foreign key(需要做外键的字段) references 需要绑定哪个表的主键的表的名称(主键id)</code></p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> grade<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    km <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    score <span class="token keyword">double</span><span class="token punctuation">,</span>
+    uid <span class="token keyword">int</span><span class="token punctuation">,</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span> <span class="token keyword">references</span> stu<span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点</p> <ul><li>只有InnoDB的存储引擎才支持外键约束</li> <li>外键的数据类型必须和指向的主键一致</li> <li>在一对多的关系中，外键一般定义在多的一方（一个学生有多门成绩，那么外键定义在成绩表中）</li> <li>定义外键的表我们称之为从表，被外键引用的表我们称之为主表</li></ul></div> <h4 id="如何动态的添加外键"><a href="#如何动态的添加外键" class="header-anchor">#</a> 如何动态的添加外键</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 从表名称 <span class="token keyword">add</span> foregin <span class="token keyword">key</span><span class="token punctuation">(</span>从表外键字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名称<span class="token punctuation">(</span>主表主键名称<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="如何查看谁是外键"><a href="#如何查看谁是外键" class="header-anchor">#</a> 如何查看谁是外键</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">table</span> 从表名称<span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>在查看表中外键的时候会有以下的一种格式：</p> <div class="language- extra-class"><pre class="language-text"><code>CONSTRAINT `grade_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `stu` (`id`)
+</code></pre></div><p>解释如下：</p> <ul><li>将uid变成外键，外键的名称是 <code>grade_ibfk_1</code></li> <li>uid的取值引用的是stu这张表中的id字段的值</li></ul></div> <h4 id="如何动态删除外键"><a href="#如何动态删除外键" class="header-anchor">#</a> 如何动态删除外键</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 从表名称 <span class="token keyword">drop</span> foregin <span class="token keyword">key</span> 外键名称<span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>这里的外键名称与上面查出来的外键名称需要一致，如上面的<code>grade_ibfk_1</code></p></div> <h4 id="外键的操作"><a href="#外键的操作" class="header-anchor">#</a> 外键的操作</h4> <ul><li><p>严格操作</p> <ul><li>主表中不存在对应的数据，从表不允许添加数据</li> <li>从表引用主表数据，主表的数据不允许被删除</li> <li>从表引用主表数据，主表的被引用的数据不允许修改</li></ul></li> <li><p>置空操作（null）</p> <ul><li>在企业开发中，我们可能必须要删除主表中的数据，但是如果主表被删除了从表就不完整了</li> <li>所以在企业开发中，我们可以通过置空操作，在删除主表数据的同时删除从表中的关联数据</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> grade<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    uid <span class="token keyword">int</span><span class="token punctuation">,</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span> <span class="token keyword">references</span> stu<span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">on</span> <span class="token keyword">delete</span> <span class="token keyword">set</span> <span class="token boolean">null</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><ul><li>如果删除主表中的数据对应从表中的外键字段会被置空</li></ul></li> <li><p>联级操作</p> <ul><li>在企业开发中，我们可能必须要修改主表中的数据，但是如果主表被修改了从表数据就不完整了</li> <li>所以我们可以通过级联操作实现，在主表中修改数据从表中对应的也会自动修改</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> grade<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    uid <span class="token keyword">int</span><span class="token punctuation">,</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span> <span class="token keyword">references</span> stu<span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">on</span> <span class="token keyword">update</span> <span class="token keyword">cascade</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div></li></ul> <h4 id="多对多外键"><a href="#多对多外键" class="header-anchor">#</a> 多对多外键</h4> <p>在多对多表中存在一张关系表</p> <p>学生表：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> stu<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><p>教师表：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> grade<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+</code></pre></div><p>关系表：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">create</span> <span class="token keyword">table</span> rel<span class="token punctuation">(</span>
+    stuId <span class="token keyword">int</span><span class="token punctuation">,</span>
+    gradeId <span class="token keyword">int</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">alter</span> <span class="token keyword">table</span> rel <span class="token keyword">add</span> foregin <span class="token keyword">key</span><span class="token punctuation">(</span>stuId<span class="token punctuation">)</span> <span class="token keyword">references</span> stu<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> rel <span class="token keyword">add</span> foregin <span class="token keyword">key</span><span class="token punctuation">(</span>gradeId<span class="token punctuation">)</span> <span class="token keyword">references</span> grade<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>通过关系表保证了表的引用完整性和参照完整性。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/11/2020, 8:15:24 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-base/sql/mysql/class.html" class="prev">
+        数据库中的数据类型
+      </a></span> <span class="next"><a href="/study-base/sql/mysql/高级查询.html">
+        MySQL高级查询
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.97121cf9.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/74.251ae369.js" defer></script>
+  </body>
+</html>

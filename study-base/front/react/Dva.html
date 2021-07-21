@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dva | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.97121cf9.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/44.0cf67f2b.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.f5eb5395.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.128e7641.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.9df64f34.js"><link rel="prefetch" href="/study-base/assets/js/15.65e549f6.js"><link rel="prefetch" href="/study-base/assets/js/16.745ce61d.js"><link rel="prefetch" href="/study-base/assets/js/17.42fea5da.js"><link rel="prefetch" href="/study-base/assets/js/18.c7067d2b.js"><link rel="prefetch" href="/study-base/assets/js/19.11100cb3.js"><link rel="prefetch" href="/study-base/assets/js/20.450ab4d3.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.120496b1.js"><link rel="prefetch" href="/study-base/assets/js/23.0af2de99.js"><link rel="prefetch" href="/study-base/assets/js/24.caacb099.js"><link rel="prefetch" href="/study-base/assets/js/25.81315ac3.js"><link rel="prefetch" href="/study-base/assets/js/26.ad384110.js"><link rel="prefetch" href="/study-base/assets/js/27.ef47f2b2.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.354e4186.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.7699a97a.js"><link rel="prefetch" href="/study-base/assets/js/32.0ee92396.js"><link rel="prefetch" href="/study-base/assets/js/33.26431533.js"><link rel="prefetch" href="/study-base/assets/js/34.01cdc02d.js"><link rel="prefetch" href="/study-base/assets/js/35.82a1b097.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.937bc89f.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.9b086dc7.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.faaff064.js"><link rel="prefetch" href="/study-base/assets/js/49.f41fa857.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.22fcc890.js"><link rel="prefetch" href="/study-base/assets/js/51.5a69d3d4.js"><link rel="prefetch" href="/study-base/assets/js/52.90d9eb96.js"><link rel="prefetch" href="/study-base/assets/js/53.c185379f.js"><link rel="prefetch" href="/study-base/assets/js/54.6b5bf154.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.29929119.js"><link rel="prefetch" href="/study-base/assets/js/57.cd2f97fd.js"><link rel="prefetch" href="/study-base/assets/js/58.0e9f0437.js"><link rel="prefetch" href="/study-base/assets/js/59.67d22fe9.js"><link rel="prefetch" href="/study-base/assets/js/6.79afe6eb.js"><link rel="prefetch" href="/study-base/assets/js/60.5d17c5cc.js"><link rel="prefetch" href="/study-base/assets/js/61.b42684ab.js"><link rel="prefetch" href="/study-base/assets/js/62.4975433d.js"><link rel="prefetch" href="/study-base/assets/js/63.e4fa59ab.js"><link rel="prefetch" href="/study-base/assets/js/64.86cb3f77.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.275c4f0c.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.43281203.js"><link rel="prefetch" href="/study-base/assets/js/69.fb20dd41.js"><link rel="prefetch" href="/study-base/assets/js/7.84d6f6d3.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.621aafab.js"><link rel="prefetch" href="/study-base/assets/js/72.c65c6544.js"><link rel="prefetch" href="/study-base/assets/js/73.809147c2.js"><link rel="prefetch" href="/study-base/assets/js/74.251ae369.js"><link rel="prefetch" href="/study-base/assets/js/75.64bf8be2.js"><link rel="prefetch" href="/study-base/assets/js/76.425e7c7a.js"><link rel="prefetch" href="/study-base/assets/js/77.dc586556.js"><link rel="prefetch" href="/study-base/assets/js/78.c0c7ce70.js"><link rel="prefetch" href="/study-base/assets/js/79.93cba4fc.js"><link rel="prefetch" href="/study-base/assets/js/8.0025d786.js"><link rel="prefetch" href="/study-base/assets/js/80.73106b4f.js"><link rel="prefetch" href="/study-base/assets/js/81.dc3c5873.js"><link rel="prefetch" href="/study-base/assets/js/82.018d68f0.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.5d08aa29.js"><link rel="prefetch" href="/study-base/assets/js/85.f95a2bd9.js"><link rel="prefetch" href="/study-base/assets/js/86.50e0f517.js"><link rel="prefetch" href="/study-base/assets/js/87.6ae42b60.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link router-link-active">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link router-link-active">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/front/react/" aria-current="page" class="sidebar-link">react基础学习</a></li><li><a href="/study-base/front/react/jsx.html" class="sidebar-link">JSX学习</a></li><li><a href="/study-base/front/react/React脚手架.html" class="sidebar-link">React脚手架</a></li><li><a href="/study-base/front/react/组件深入.html" class="sidebar-link">组件深入</a></li><li><a href="/study-base/front/react/样式深入.html" class="sidebar-link">样式深入</a></li><li><a href="/study-base/front/react/深入动画.html" class="sidebar-link">深入动画</a></li><li><a href="/study-base/front/react/深入路由.html" class="sidebar-link">深入路由</a></li><li><a href="/study-base/front/react/Redux.html" class="sidebar-link">深入Redux</a></li><li><a href="/study-base/front/react/Hooks.html" class="sidebar-link">ReactHooks</a></li><li><a href="/study-base/front/react/antd.html" class="sidebar-link">antdPro的使用</a></li><li><a href="/study-base/front/react/接口文档.html" class="sidebar-link">接口文档</a></li><li><a href="/study-base/front/react/项目部署.html" class="sidebar-link">项目部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dva"><a href="#dva" class="header-anchor">#</a> Dva</h1> <p>轻量级的应用框架</p> <p>dva是一个基于redux和redux-saga的数据流方案，内置了react、react-dom、react-router、redux、redux-saga</p> <p>官方地址： <a href="https://dvajs.com/guide/" target="_blank" rel="noopener noreferrer">https://dvajs.com/guide/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="安装dva"><a href="#安装dva" class="header-anchor">#</a> 安装dva</h2> <div class="language-shell script extra-class"><pre class="language-shell"><code>
+<span class="token function">npm</span> <span class="token function">install</span> dva
+
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-jsx extra-class"><pre class="language-jsx"><code>
+<span class="token keyword">import</span> dva <span class="token keyword">from</span> <span class="token string">'dva'</span>
+
+<span class="token comment">// 创实例对象</span>
+
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">dva</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 定义组件</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            App
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注册路由表，告诉dva需要渲染哪个组件</span>
+<span class="token comment">// 回调函数返回的值，就是需要渲染的组件</span>
+app<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span><span class="token punctuation">/&gt;</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 启动dva</span>
+
+app<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token string">'#root'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="数据管理"><a href="#数据管理" class="header-anchor">#</a> 数据管理</h2> <p>通过model来管理数据，可以同时创建多个model但是要保证每个model的命名空间都要不相同</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>
+<span class="token keyword">import</span> dva<span class="token punctuation">,</span><span class="token punctuation">{</span>connect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dva'</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 创实例对象</span>
+
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">dva</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 定义一个model</span>
+
+<span class="token keyword">let</span> homeModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        num<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">+</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">-</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> aboutModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'about'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">-</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 告诉dva需要使用哪个model</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>homeModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>aboutModel<span class="token punctuation">)</span>
+
+<span class="token comment">// 在mapStateToProps方法中告诉React-Redux,需要将store中保存的哪些数据映射到当前组件的props上</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+        <span class="token comment">// 需要从传入的命名空间中拿到对应的数据</span>
+        num<span class="token operator">:</span>state<span class="token punctuation">.</span>home<span class="token punctuation">.</span>num
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// mapDispatchToProps方法中告诉React-Redux，需要将哪些派发的任务映射到当前的组件上的props</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatch</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+        <span class="token comment">// 也需要指定命名空间</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'home/add'</span><span class="token punctuation">,</span>num<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'home/sub'</span><span class="token punctuation">,</span>num<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> AdvHome <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span>mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Home<span class="token punctuation">)</span>
+
+<span class="token comment">// 定义组件</span>
+
+<span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>num<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">增加</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">减少</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AdvHome</span></span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注册路由表，告诉dva需要渲染哪个组件</span>
+<span class="token comment">// 回调函数返回的值，就是需要渲染的组件</span>
+app<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span><span class="token punctuation">/&gt;</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 启动dva</span>
+
+app<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token string">'#root'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="dva异步处理"><a href="#dva异步处理" class="header-anchor">#</a> dva异步处理</h3> <p>在dva中添加一个effects来对异步的数据进项相应的处理</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>
+<span class="token keyword">import</span> dva<span class="token punctuation">,</span> <span class="token punctuation">{</span>connect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dva'</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 创实例对象</span>
+
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">dva</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 定义一个model</span>
+
+<span class="token keyword">let</span> homeModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        num<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        info<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">+</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">-</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">changeInfo</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> info<span class="token operator">:</span> action<span class="token punctuation">.</span>info<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 异步数据处理</span>
+    effects<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token operator">*</span> <span class="token function">asyncUserInfo</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> <span class="token punctuation">{</span>put<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://getman.cn/mock/yanyu/test'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span>  response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'changeInfo'</span><span class="token punctuation">,</span>info<span class="token operator">:</span>data<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> aboutModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'about'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">-</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 告诉dva需要使用哪个model</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>homeModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>aboutModel<span class="token punctuation">)</span>
+
+<span class="token comment">// 在mapStateToProps方法中告诉React-Redux,需要将store中保存的哪些数据映射到当前组件的props上</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 需要从传入的命名空间中拿到对应的数据</span>
+        num<span class="token operator">:</span> state<span class="token punctuation">.</span>home<span class="token punctuation">.</span>num<span class="token punctuation">,</span>
+        info<span class="token operator">:</span>state<span class="token punctuation">.</span>home<span class="token punctuation">.</span>info
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// mapDispatchToProps方法中告诉React-Redux，需要将哪些派发的任务映射到当前的组件上的props</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatch</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 也需要指定命名空间</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'home/add'</span><span class="token punctuation">,</span> num<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'home/sub'</span><span class="token punctuation">,</span> num<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'home/asyncUserInfo'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> AdvHome <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Home<span class="token punctuation">)</span>
+
+<span class="token comment">// 定义组件</span>
+
+<span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>num<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">增加
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">减少
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>info<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>info<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">获取</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AdvHome</span></span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注册路由表，告诉dva需要渲染哪个组件</span>
+<span class="token comment">// 回调函数返回的值，就是需要渲染的组件</span>
+app<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span><span class="token punctuation">/&gt;</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 启动dva</span>
+
+app<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token string">'#root'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="dva项目示例"><a href="#dva项目示例" class="header-anchor">#</a> Dva项目示例</h2> <div class="language-jsx extra-class"><pre class="language-jsx"><code>
+<span class="token keyword">import</span> dva<span class="token punctuation">,</span> <span class="token punctuation">{</span>connect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dva'</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Router<span class="token punctuation">,</span>Route<span class="token punctuation">,</span>Link<span class="token punctuation">,</span>routerRedux<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dva/router'</span>
+<span class="token keyword">import</span> createHistory <span class="token keyword">from</span> <span class="token string">'history/createBrowserHistory'</span><span class="token punctuation">;</span>
+<span class="token comment">// 创实例对象</span>
+
+<span class="token comment">/**
+ * 在通过Dva方法创建Dva实例的时候，这个方法是可以接受一个对象的
+ * 我们可以在这个对象指定dva路由的模式，
+ * 如果在创建dva示例的时候，没有指定路由的模式，默认就是hash模式
+ */</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">dva</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 指定路由模式</span>
+    history<span class="token operator">:</span><span class="token function">createHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定state默认值// 如果同时在initialState和model中都指定了初始值，initialState的优先级高于model</span>
+    initialState<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token comment">// 指定模型名称</span>
+        home<span class="token operator">:</span><span class="token punctuation">{</span>
+            num<span class="token operator">:</span><span class="token number">676</span><span class="token punctuation">,</span>
+            info<span class="token operator">:</span><span class="token punctuation">{</span>
+                name<span class="token operator">:</span><span class="token string">'test12'</span><span class="token punctuation">,</span>
+                age<span class="token operator">:</span><span class="token number">1212</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onError</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token comment">// 如果effects中发生了错误，并且在effects中没有捕获到错误，那么就会在onError中捕获</span>
+        <span class="token comment">// 如果在subscriptions中通过done传递了错误，也会在onError中捕获</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 注册中间件</span>
+    <span class="token comment">// onAction:middlware</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 定义一个model</span>
+
+<span class="token keyword">let</span> homeModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        num<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        info<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">+</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> num<span class="token operator">:</span> state<span class="token punctuation">.</span>num <span class="token operator">-</span> action<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">changeInfo</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> info<span class="token operator">:</span> action<span class="token punctuation">.</span>info<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 异步数据处理</span>
+    effects<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token operator">*</span> <span class="token function">asyncUserInfo</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> <span class="token punctuation">{</span>put<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://getman.cn/mock/yanyu/test'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span>  response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'changeInfo'</span><span class="token punctuation">,</span>info<span class="token operator">:</span>data<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 订阅</span>
+    subscriptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">setup</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> history<span class="token punctuation">,</span> dispatch <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 监听 history 变化，当进入 `/` 时触发 `load` action</span>
+            <span class="token keyword">return</span> history<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> pathname <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                document<span class="token punctuation">.</span>title <span class="token operator">=</span> pathname
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> aboutModel <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指定当前model的命名空间的名称，用来区分 不同的model</span>
+    namespace<span class="token operator">:</span> <span class="token string">'about'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的数据</span>
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 指定当前命名空间保存的reducers</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// reducers中key的作用，类型</span>
+        <span class="token comment">// {type:add,payload:xxx}</span>
+        <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sub</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>count<span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">-</span> action<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 告诉dva需要使用哪个model</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>homeModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span>aboutModel<span class="token punctuation">)</span>
+
+<span class="token comment">// 在mapStateToProps方法中告诉React-Redux,需要将store中保存的哪些数据映射到当前组件的props上</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps1</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 需要从传入的命名空间中拿到对应的数据</span>
+        num<span class="token operator">:</span> state<span class="token punctuation">.</span>home<span class="token punctuation">.</span>num<span class="token punctuation">,</span>
+        info<span class="token operator">:</span>state<span class="token punctuation">.</span>home<span class="token punctuation">.</span>info
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// mapDispatchToProps方法中告诉React-Redux，需要将哪些派发的任务映射到当前的组件上的props</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps1</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatch</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 也需要指定命名空间</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'home/add'</span><span class="token punctuation">,</span> num<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'home/sub'</span><span class="token punctuation">,</span> num<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span><span class="token string">'home/asyncUserInfo'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">go2About</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span>routerRedux<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;/about&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> AdvHome <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps1<span class="token punctuation">,</span> mapDispatchToProps1<span class="token punctuation">)</span><span class="token punctuation">(</span>Home<span class="token punctuation">)</span>
+
+<span class="token comment">// 定义组件</span>
+
+<span class="token keyword">function</span> <span class="token function">About</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>count<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">增加
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">减少
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">go2Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">返回上一页</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token comment">// 在mapStateToProps方法中告诉React-Redux,需要将store中保存的哪些数据映射到当前组件的props上</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 需要从传入的命名空间中拿到对应的数据</span>
+        count<span class="token operator">:</span>state<span class="token punctuation">.</span>about<span class="token punctuation">.</span>count
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// mapDispatchToProps方法中告诉React-Redux，需要将哪些派发的任务映射到当前的组件上的props</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatch</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 也需要指定命名空间</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'about/add'</span><span class="token punctuation">,</span> count<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">'about/sub'</span><span class="token punctuation">,</span> count<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">go2Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span>routerRedux<span class="token punctuation">.</span><span class="token function">goBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> AdvAbout <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps2<span class="token punctuation">,</span> mapDispatchToProps2<span class="token punctuation">)</span><span class="token punctuation">(</span>About<span class="token punctuation">)</span>
+
+<span class="token comment">// 定义组件</span>
+
+<span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>num<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">增加
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                props<span class="token punctuation">.</span><span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">减少
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>info<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>info<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">获取</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">go2About</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">跳转About</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Router</span></span> <span class="token attr-name">history</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>history<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">'/home'</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Home</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">'/about'</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">about</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">'/about'</span><span class="token punctuation">}</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>AdvAbout<span class="token punctuation">}</span></span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">'/home'</span><span class="token punctuation">}</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>AdvHome<span class="token punctuation">}</span></span><span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Router</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注册路由表，告诉dva需要渲染哪个组件</span>
+<span class="token comment">// 回调函数返回的值，就是需要渲染的组件</span>
+<span class="token comment">// dva的router方法在执行回调函数的时候，会传递一个对象给我们，我们可以从这个对象中结构出当前路由的模式</span>
+<span class="token comment">// 如果在创建dva实例的时候没有指定模式，那么得到的就是hash模式</span>
+<span class="token comment">// 如果在创建dva实例的时候指定了模式，那么得到的就是我们指定的模式</span>
+app<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>history<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span> <span class="token attr-name">history</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>history<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 启动dva</span>
+
+app<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token string">'#root'</span><span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/29/2020, 8:55:49 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.97121cf9.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/44.0cf67f2b.js" defer></script>
+  </body>
+</html>

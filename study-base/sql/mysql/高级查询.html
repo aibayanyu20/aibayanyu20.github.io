@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL高级查询 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.97121cf9.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/77.dc586556.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.f5eb5395.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.128e7641.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.9df64f34.js"><link rel="prefetch" href="/study-base/assets/js/15.65e549f6.js"><link rel="prefetch" href="/study-base/assets/js/16.745ce61d.js"><link rel="prefetch" href="/study-base/assets/js/17.42fea5da.js"><link rel="prefetch" href="/study-base/assets/js/18.c7067d2b.js"><link rel="prefetch" href="/study-base/assets/js/19.11100cb3.js"><link rel="prefetch" href="/study-base/assets/js/20.450ab4d3.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.120496b1.js"><link rel="prefetch" href="/study-base/assets/js/23.0af2de99.js"><link rel="prefetch" href="/study-base/assets/js/24.caacb099.js"><link rel="prefetch" href="/study-base/assets/js/25.81315ac3.js"><link rel="prefetch" href="/study-base/assets/js/26.ad384110.js"><link rel="prefetch" href="/study-base/assets/js/27.ef47f2b2.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.354e4186.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.7699a97a.js"><link rel="prefetch" href="/study-base/assets/js/32.0ee92396.js"><link rel="prefetch" href="/study-base/assets/js/33.26431533.js"><link rel="prefetch" href="/study-base/assets/js/34.01cdc02d.js"><link rel="prefetch" href="/study-base/assets/js/35.82a1b097.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.937bc89f.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.9b086dc7.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/44.0cf67f2b.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.faaff064.js"><link rel="prefetch" href="/study-base/assets/js/49.f41fa857.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.22fcc890.js"><link rel="prefetch" href="/study-base/assets/js/51.5a69d3d4.js"><link rel="prefetch" href="/study-base/assets/js/52.90d9eb96.js"><link rel="prefetch" href="/study-base/assets/js/53.c185379f.js"><link rel="prefetch" href="/study-base/assets/js/54.6b5bf154.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.29929119.js"><link rel="prefetch" href="/study-base/assets/js/57.cd2f97fd.js"><link rel="prefetch" href="/study-base/assets/js/58.0e9f0437.js"><link rel="prefetch" href="/study-base/assets/js/59.67d22fe9.js"><link rel="prefetch" href="/study-base/assets/js/6.79afe6eb.js"><link rel="prefetch" href="/study-base/assets/js/60.5d17c5cc.js"><link rel="prefetch" href="/study-base/assets/js/61.b42684ab.js"><link rel="prefetch" href="/study-base/assets/js/62.4975433d.js"><link rel="prefetch" href="/study-base/assets/js/63.e4fa59ab.js"><link rel="prefetch" href="/study-base/assets/js/64.86cb3f77.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.275c4f0c.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.43281203.js"><link rel="prefetch" href="/study-base/assets/js/69.fb20dd41.js"><link rel="prefetch" href="/study-base/assets/js/7.84d6f6d3.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.621aafab.js"><link rel="prefetch" href="/study-base/assets/js/72.c65c6544.js"><link rel="prefetch" href="/study-base/assets/js/73.809147c2.js"><link rel="prefetch" href="/study-base/assets/js/74.251ae369.js"><link rel="prefetch" href="/study-base/assets/js/75.64bf8be2.js"><link rel="prefetch" href="/study-base/assets/js/76.425e7c7a.js"><link rel="prefetch" href="/study-base/assets/js/78.c0c7ce70.js"><link rel="prefetch" href="/study-base/assets/js/79.93cba4fc.js"><link rel="prefetch" href="/study-base/assets/js/8.0025d786.js"><link rel="prefetch" href="/study-base/assets/js/80.73106b4f.js"><link rel="prefetch" href="/study-base/assets/js/81.dc3c5873.js"><link rel="prefetch" href="/study-base/assets/js/82.018d68f0.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.5d08aa29.js"><link rel="prefetch" href="/study-base/assets/js/85.f95a2bd9.js"><link rel="prefetch" href="/study-base/assets/js/86.50e0f517.js"><link rel="prefetch" href="/study-base/assets/js/87.6ae42b60.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link router-link-active">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link router-link-active">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/sql/mysql/" aria-current="page" class="sidebar-link">MySQL数据库</a></li><li><a href="/study-base/sql/mysql/crud.html" class="sidebar-link">数据库CRUD操作</a></li><li><a href="/study-base/sql/mysql/class.html" class="sidebar-link">数据库中的数据类型</a></li><li><a href="/study-base/sql/mysql/数据完整性.html" class="sidebar-link">MySQL的完整性</a></li><li><a href="/study-base/sql/mysql/高级查询.html" class="active sidebar-link">MySQL高级查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#单表查询" class="sidebar-link">单表查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#什么是结果集" class="sidebar-link">什么是结果集</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#如何给结果集的字段起别名" class="sidebar-link">如何给结果集的字段起别名</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#什么是字段表达式" class="sidebar-link">什么是字段表达式</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#什么是伪表" class="sidebar-link">什么是伪表</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#模糊查询" class="sidebar-link">模糊查询</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#排序" class="sidebar-link">排序</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#聚合函数" class="sidebar-link">聚合函数</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#数据分组" class="sidebar-link">数据分组</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#数据分页" class="sidebar-link">数据分页</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#查询选项" class="sidebar-link">查询选项</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#完整的查询语句" class="sidebar-link">完整的查询语句</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#多表查询" class="sidebar-link">多表查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#union作用" class="sidebar-link">union作用</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#表的连接查询" class="sidebar-link">表的连接查询</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#using-关键字" class="sidebar-link">using 关键字</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/mysql/高级查询.html#子查询" class="sidebar-link">子查询</a></li></ul></li></ul></li><li><a href="/study-base/sql/mysql/事务.html" class="sidebar-link">数据库事务操作</a></li><li><a href="/study-base/sql/mysql/视图.html" class="sidebar-link">数据库视图</a></li><li><a href="/study-base/sql/mysql/存储过程和函数.html" class="sidebar-link">存储过程和函数</a></li><li><a href="/study-base/sql/mysql/索引.html" class="sidebar-link">索引的使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql高级查询"><a href="#mysql高级查询" class="header-anchor">#</a> MySQL高级查询</h1> <h2 id="单表查询"><a href="#单表查询" class="header-anchor">#</a> 单表查询</h2> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span><span class="token comment"># 查询表中所有的数据</span>
+
+<span class="token keyword">select</span> 字段名称 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span> <span class="token comment"># 查询表中指定字段数据</span>
+
+<span class="token keyword">select</span> <span class="token punctuation">[</span><span class="token operator">*</span> <span class="token operator">||</span> 字段<span class="token punctuation">]</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment"># 查询表中满足条件的数据</span>
+
+</code></pre></div><h3 id="什么是结果集"><a href="#什么是结果集" class="header-anchor">#</a> 什么是结果集</h3> <p>通过查询语句查询出来的结果我们就称之为结果集，
+结果集以表的形式将查询结果返回给我们</p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>结果集返回的表和查询的表不是同一张表，被查询的表是真实存在的，是存储在磁盘上的，而结果集不是真实存在的，是存储在内存中的</p></div> <h3 id="如何给结果集的字段起别名"><a href="#如何给结果集的字段起别名" class="header-anchor">#</a> 如何给结果集的字段起别名</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> 字段名称 <span class="token keyword">as</span> 新的别名 <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="什么是字段表达式"><a href="#什么是字段表达式" class="header-anchor">#</a> 什么是字段表达式</h3> <p>查询数据的时候，除了可以查询指定字段的数据以外，我们还可以查询表达式的结果</p> <p>例如：SELECT 6+6;</p> <h3 id="什么是伪表"><a href="#什么是伪表" class="header-anchor">#</a> 什么是伪表</h3> <ul><li>字段表达式虽然能够查询出表达式的结果，但是不符合MySQL的规范</li> <li>所以我们可以通过伪表(dua1)的方式让字段表达式符合MySQL的规范</li></ul> <p>select 6+6 from dua1;</p> <h3 id="模糊查询"><a href="#模糊查询" class="header-anchor">#</a> 模糊查询</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> 字段名称 <span class="token keyword">from</span> 表名 <span class="token keyword">where</span> 字段 <span class="token operator">like</span> <span class="token string">'条件'</span><span class="token punctuation">;</span>
+
+</code></pre></div><ul><li><p>通配符<code>_</code>： 表示任意一个字符</p></li> <li><p>通配符<code>%</code>： 表示任意的0~n个字符</p></li></ul> <h3 id="排序"><a href="#排序" class="header-anchor">#</a> 排序</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span> <span class="token keyword">order</span> <span class="token keyword">by</span> 字段名称 <span class="token punctuation">[</span><span class="token keyword">asc</span><span class="token operator">|</span><span class="token keyword">desc</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 复合排序 如果第一个字段名称相同，就按照第二个字段名进行排序，以此类推</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span> <span class="token keyword">order</span> <span class="token keyword">by</span> 字段名称 <span class="token punctuation">[</span><span class="token keyword">asc</span><span class="token operator">|</span><span class="token keyword">desc</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 字段名称 <span class="token punctuation">[</span><span class="token keyword">asc</span><span class="token operator">|</span><span class="token keyword">desc</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre></div><ul><li><p>默认按照升序排序ASC</p></li> <li><p>降序排序DESC</p></li></ul> <h3 id="聚合函数"><a href="#聚合函数" class="header-anchor">#</a> 聚合函数</h3> <ul><li><p>count() ：统计</p></li> <li><p>sum() : 求和</p></li> <li><p>avg() : 求平均值</p></li> <li><p>max() : 获取最大值</p></li> <li><p>min() : 获取最小值</p></li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>字段名名称<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token function">sum</span><span class="token punctuation">(</span>字段名名称<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>字段名名称<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>字段名名称<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token function">min</span><span class="token punctuation">(</span>字段名名称<span class="token punctuation">)</span> <span class="token keyword">from</span> 表名 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="数值类"><a href="#数值类" class="header-anchor">#</a> 数值类</h4> <ul><li>rand() : 生成随机数</li></ul> <p>例子：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 随机排序</span>
+
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token keyword">where</span> 表名称 <span class="token keyword">order</span> <span class="token keyword">by</span> rand<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+</code></pre></div><ul><li><p>round() : 四舍五入</p></li> <li><p>ceil() : 向上取整</p> <ul><li>3.1 -&gt; 4</li></ul></li> <li><p>floor() : 向下取整</p> <ul><li>3.1 -&gt; 3</li></ul></li> <li><p>truncate() : 截取小数位</p> <ul><li>truncate(要截取的小数,要截取的位数);</li></ul></li></ul> <h4 id="字符串类"><a href="#字符串类" class="header-anchor">#</a> 字符串类</h4> <ul><li><p>ucase() ：转换为大写</p></li> <li><p>lcase() ：转小写</p></li> <li><p>left() : 从左边开始截取到指定的位置</p></li> <li><p>right() : 从右边开始截取到指定的位置</p></li> <li><p>substring() : 从左边的指定位置开始截取到指定位置结束</p> <ul><li>substring('1234566',2,6)</li></ul></li></ul> <h3 id="数据分组"><a href="#数据分组" class="header-anchor">#</a> 数据分组</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> 分组字段 <span class="token operator">||</span> 聚合函数 <span class="token keyword">from</span> 表名称 <span class="token keyword">group</span> <span class="token keyword">by</span> 分组字段<span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>在对数据进行分组的时候，select 后面必须是分组字段或者聚合函数，否则就只会返回第一条数据</p> <p>例如：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> city <span class="token keyword">from</span> stu <span class="token keyword">group</span> <span class="token keyword">by</span> city<span class="token punctuation">;</span><span class="token comment"># 可以查询到全部的城市</span>
+
+<span class="token keyword">select</span> name <span class="token keyword">from</span> stu <span class="token keyword">group</span> <span class="token keyword">by</span> city<span class="token punctuation">;</span><span class="token comment"># name数据可能会缺失</span>
+
+</code></pre></div></div> <h4 id="条件查询-having"><a href="#条件查询-having" class="header-anchor">#</a> 条件查询 having:</h4> <ul><li><p>having和where很像都是用来做条件查询的</p></li> <li><p>但是where是去数据库中查询符合条件的数据，而having是在结果集中查询符合条件的数据</p></li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> stu <span class="token keyword">where</span> city <span class="token operator">=</span> <span class="token string">'北京'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> stu <span class="token keyword">having</span> city <span class="token operator">=</span> <span class="token string">'北京'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>age <span class="token keyword">from</span> stu <span class="token keyword">where</span> city <span class="token operator">=</span> <span class="token string">'北京'</span><span class="token punctuation">;</span> <span class="token comment"># 运行不会报错</span>
+
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>age <span class="token keyword">from</span> stu <span class="token keyword">having</span> city <span class="token operator">=</span> <span class="token string">'北京'</span><span class="token punctuation">;</span><span class="token comment"># 会报错找不到city列</span>
+
+</code></pre></div><p>需求：查询某个城市的平均分是否大于60</p> <p>解析步骤：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token comment"># 1. 先按照城市进行分组</span>
+
+<span class="token keyword">select</span> city <span class="token keyword">from</span> stu <span class="token keyword">group</span> <span class="token keyword">by</span> city<span class="token punctuation">;</span>
+
+<span class="token comment"># 2. 取出分组中每个城市的平均分</span>
+
+<span class="token keyword">select</span> city<span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> average <span class="token keyword">from</span> stu <span class="token keyword">group</span> <span class="token keyword">by</span> city<span class="token punctuation">;</span>
+
+<span class="token comment"># 3. 取出大于60的分的城市和成绩</span>
+
+<span class="token keyword">select</span> city <span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> average <span class="token keyword">from</span> stu <span class="token keyword">group</span> <span class="token keyword">by</span> city <span class="token keyword">having</span> average <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">;</span>
+
+
+</code></pre></div><h3 id="数据分页"><a href="#数据分页" class="header-anchor">#</a> 数据分页</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称 <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span> <span class="token keyword">limit</span> 索引<span class="token punctuation">,</span>个数<span class="token punctuation">;</span>
+<span class="token comment"># 从第几个开始 给几条数据；</span>
+
+</code></pre></div><h3 id="查询选项"><a href="#查询选项" class="header-anchor">#</a> 查询选项</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token punctuation">[</span>查询选项<span class="token punctuation">]</span> 字段名称 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+
+</code></pre></div><ul><li><p>all:      显示查询的所有数据（默认）</p></li> <li><p>distinct: 去除重复的数据后在进行显示</p></li></ul> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果是通过distinct来对结果集重复的数据进行去重，
+那么只有所有列的数据都相同的时候才会出去重复</p> <p>如果存在两个字段name和score分别为
+name,score
+ls,12
+ls,21
+使用语句查询去重</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> name <span class="token punctuation">,</span>score <span class="token keyword">from</span> stu<span class="token punctuation">;</span>
+
+</code></pre></div><p>这个时候去重是不生效的，因为name相同score不同不会进行去重</p></div> <h3 id="完整的查询语句"><a href="#完整的查询语句" class="header-anchor">#</a> 完整的查询语句</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token punctuation">[</span>查询选项<span class="token punctuation">]</span> 字段名称 <span class="token punctuation">[</span><span class="token keyword">from</span> 表名<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">where</span> 条件<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">order</span> <span class="token keyword">by</span> 排序<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">group</span> <span class="token keyword">by</span> 分组<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">having</span> 条件<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">limit</span> 索引<span class="token punctuation">,</span>个数<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="多表查询"><a href="#多表查询" class="header-anchor">#</a> 多表查询</h2> <p>多表查询只需要在单表查询的基础上增加一张表即可</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称<span class="token number">1</span><span class="token punctuation">,</span>表名称<span class="token number">2</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>默认情况下，多表查询的情况下是笛卡尔积,第一张表有三列，第二张表有2列那么一共出来的数据就是3*2 = 6列</p> <p>数据会出现大量的冗余</p></div> <h3 id="union作用"><a href="#union作用" class="header-anchor">#</a> union作用</h3> <p>在纵向上将多张表的结果结合起来，返回给我们</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称<span class="token number">1</span> <span class="token keyword">union</span> <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名称<span class="token number">2</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <ul><li><p>使用union进行多表查询，返回的结果集是第一张表的表头名称</p></li> <li><p>使用union进行多表查询，必须保证多张表查询的字段个数一致,若一致就会报错</p></li></ul> <p>例如：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> id<span class="token punctuation">,</span>name <span class="token keyword">from</span> stu <span class="token keyword">union</span> <span class="token keyword">select</span> id<span class="token punctuation">,</span>score<span class="token punctuation">,</span>uid <span class="token keyword">from</span> person<span class="token punctuation">;</span> <span class="token comment">#报错字段个数不一致</span>
+
+</code></pre></div><ul><li><p>使用union进行多表查询，会对数据进行自动去重。</p> <ul><li>若不需要去重，则需要在union 后面加上 all =&gt; union all
+<code>select id,name from stu union all select id,score from person;</code></li></ul></li></ul></div> <h3 id="表的连接查询"><a href="#表的连接查询" class="header-anchor">#</a> 表的连接查询</h3> <ul><li>将多张表中&quot;关联的字段&quot;连接到一起查询，我们称之为'表的连接查询'</li> <li>不使用连接：
+select * from stu,grade where stu.id = grade.stuId;</li></ul> <h4 id="内连接-inner-join"><a href="#内连接-inner-join" class="header-anchor">#</a> 内连接 inner join</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名<span class="token number">1</span> <span class="token keyword">inner</span> <span class="token keyword">join</span> 表名<span class="token number">2</span> <span class="token keyword">on</span> 条件<span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> stu <span class="token keyword">inner</span> <span class="token keyword">join</span> grade <span class="token keyword">on</span> stu<span class="token punctuation">.</span>id <span class="token operator">=</span> grade<span class="token punctuation">.</span>stuId<span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <ul><li><p>在进行多表查询的时候，如果想查询指定的字段，那么必须字段名称前面加上表名称才行</p></li> <li><p>内连接只会返回满足条件的数据</p></li></ul></div> <h4 id="外连接"><a href="#外连接" class="header-anchor">#</a> 外连接</h4> <ul><li><p>左外连接 left join</p> <ul><li>在左外连接中，左边表是不看条件的，无论条件是否满足，都会返回左边表中的数据</li> <li>只有右边的表会看条件，对于右边的表而言，只有满足条件才会返回对应的数据</li></ul></li> <li><p>右外连接 right join</p> <ul><li>在右外连接中，左边表是不看条件的，无论条件是否满足，都会返回右边表中的数据</li> <li>只有左边的表会看条件，对于左边的表而言，只有满足条件才会返回对应的数据</li></ul></li></ul> <h4 id="交叉连接-cross-join"><a href="#交叉连接-cross-join" class="header-anchor">#</a> 交叉连接 cross join</h4> <p>如果没有指定条件，那么返回笛卡尔积，如果指定了条件，返回就等价于内连接</p> <h4 id="自然连接-natural"><a href="#自然连接-natural" class="header-anchor">#</a> 自然连接(natural)</h4> <p>自然连接是用来简化&quot;内连接和外连接&quot;的</p> <p>如果多张表需要判断的条件字段名称一致，那么不用编写条件，自然连接就会自动判断</p> <ul><li>自然内连接</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名<span class="token number">1</span> <span class="token keyword">natural</span> <span class="token keyword">join</span> 表名<span class="token number">2</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果没有指定的条件，也没有同名的字段，那么就会返回笛卡尔积</p> <p>在自然连接中，返回的结果集会自动优化，会自动去除重复的字段</p></div> <ul><li>自然外连接</li></ul> <ol><li><p>自然左外连接 : natural left join</p></li> <li><p>自然右外连接 : natural right join</p></li></ol> <h3 id="using-关键字"><a href="#using-关键字" class="header-anchor">#</a> using 关键字</h3> <p>如果多张表需要判断的条件字段名称是一致的，呢么除了可以使用自然连接来简化以外，还可以使用using关键字来简化。</p> <p><code>select * from stu [inner | left | right] join grade on stu.stuId = grade.stuId</code></p> <p>等同于</p> <p><code>select * from stu [inner | left | right] join grade using(stuId)</code></p> <h3 id="子查询"><a href="#子查询" class="header-anchor">#</a> 子查询</h3> <ul><li>将一个查询语句的结果作为另一个查询语句的条件来使用</li></ul> <ol><li>标准子查询（返回的结果只有一个）</li></ol> <p>select stuId from grade where score = 100;</p> <p>select name from stu where stuId = 3;</p> <p>select name from stu where stuId = (select stuId from grade where score = 100);</p> <ol start="2"><li>非标准子查询（返回结果有多个值）</li></ol> <p>select name from stu where stuId in(select stuId from grade where score &gt;= 60);</p> <ul><li>将一个查询语句的结果作为另一个查询语句的表达式来使用</li></ul> <p>select name,city,score from person where score &gt;=60;</p> <p>select name,city,score from (select name,city,score from person where score &gt;=60) as p;</p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>需要给当前的子查询起一个别名，不然会报错</p></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/12/2020, 9:55:27 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-base/sql/mysql/数据完整性.html" class="prev">
+        MySQL的完整性
+      </a></span> <span class="next"><a href="/study-base/sql/mysql/事务.html">
+        数据库事务操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.97121cf9.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/77.dc586556.js" defer></script>
+  </body>
+</html>

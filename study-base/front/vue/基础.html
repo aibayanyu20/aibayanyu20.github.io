@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue基础 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.97121cf9.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/61.b42684ab.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.f5eb5395.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.128e7641.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.9df64f34.js"><link rel="prefetch" href="/study-base/assets/js/15.65e549f6.js"><link rel="prefetch" href="/study-base/assets/js/16.745ce61d.js"><link rel="prefetch" href="/study-base/assets/js/17.42fea5da.js"><link rel="prefetch" href="/study-base/assets/js/18.c7067d2b.js"><link rel="prefetch" href="/study-base/assets/js/19.11100cb3.js"><link rel="prefetch" href="/study-base/assets/js/20.450ab4d3.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.120496b1.js"><link rel="prefetch" href="/study-base/assets/js/23.0af2de99.js"><link rel="prefetch" href="/study-base/assets/js/24.caacb099.js"><link rel="prefetch" href="/study-base/assets/js/25.81315ac3.js"><link rel="prefetch" href="/study-base/assets/js/26.ad384110.js"><link rel="prefetch" href="/study-base/assets/js/27.ef47f2b2.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.354e4186.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.7699a97a.js"><link rel="prefetch" href="/study-base/assets/js/32.0ee92396.js"><link rel="prefetch" href="/study-base/assets/js/33.26431533.js"><link rel="prefetch" href="/study-base/assets/js/34.01cdc02d.js"><link rel="prefetch" href="/study-base/assets/js/35.82a1b097.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.937bc89f.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.9b086dc7.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/44.0cf67f2b.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.faaff064.js"><link rel="prefetch" href="/study-base/assets/js/49.f41fa857.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.22fcc890.js"><link rel="prefetch" href="/study-base/assets/js/51.5a69d3d4.js"><link rel="prefetch" href="/study-base/assets/js/52.90d9eb96.js"><link rel="prefetch" href="/study-base/assets/js/53.c185379f.js"><link rel="prefetch" href="/study-base/assets/js/54.6b5bf154.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.29929119.js"><link rel="prefetch" href="/study-base/assets/js/57.cd2f97fd.js"><link rel="prefetch" href="/study-base/assets/js/58.0e9f0437.js"><link rel="prefetch" href="/study-base/assets/js/59.67d22fe9.js"><link rel="prefetch" href="/study-base/assets/js/6.79afe6eb.js"><link rel="prefetch" href="/study-base/assets/js/60.5d17c5cc.js"><link rel="prefetch" href="/study-base/assets/js/62.4975433d.js"><link rel="prefetch" href="/study-base/assets/js/63.e4fa59ab.js"><link rel="prefetch" href="/study-base/assets/js/64.86cb3f77.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.275c4f0c.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.43281203.js"><link rel="prefetch" href="/study-base/assets/js/69.fb20dd41.js"><link rel="prefetch" href="/study-base/assets/js/7.84d6f6d3.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.621aafab.js"><link rel="prefetch" href="/study-base/assets/js/72.c65c6544.js"><link rel="prefetch" href="/study-base/assets/js/73.809147c2.js"><link rel="prefetch" href="/study-base/assets/js/74.251ae369.js"><link rel="prefetch" href="/study-base/assets/js/75.64bf8be2.js"><link rel="prefetch" href="/study-base/assets/js/76.425e7c7a.js"><link rel="prefetch" href="/study-base/assets/js/77.dc586556.js"><link rel="prefetch" href="/study-base/assets/js/78.c0c7ce70.js"><link rel="prefetch" href="/study-base/assets/js/79.93cba4fc.js"><link rel="prefetch" href="/study-base/assets/js/8.0025d786.js"><link rel="prefetch" href="/study-base/assets/js/80.73106b4f.js"><link rel="prefetch" href="/study-base/assets/js/81.dc3c5873.js"><link rel="prefetch" href="/study-base/assets/js/82.018d68f0.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.5d08aa29.js"><link rel="prefetch" href="/study-base/assets/js/85.f95a2bd9.js"><link rel="prefetch" href="/study-base/assets/js/86.50e0f517.js"><link rel="prefetch" href="/study-base/assets/js/87.6ae42b60.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link router-link-active">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link router-link-active">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/front/vue/" aria-current="page" class="sidebar-link">VUE开篇介绍</a></li><li><a href="/study-base/front/vue/基础.html" class="active sidebar-link">vue基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#mvvm设计模式" class="sidebar-link">MVVM设计模式</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#数据双向传递" class="sidebar-link">数据双向传递</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#vue中的常用指令" class="sidebar-link">vue中的常用指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-once" class="sidebar-link">v-once</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-cloak" class="sidebar-link">v-cloak</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-text" class="sidebar-link">v-text</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-html" class="sidebar-link">v-html</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-if" class="sidebar-link">v-if</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-show" class="sidebar-link">v-show</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-for" class="sidebar-link">v-for</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-bind" class="sidebar-link">v-bind</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#v-on" class="sidebar-link">v-on</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#自定义指令" class="sidebar-link">自定义指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#自定义全局指令" class="sidebar-link">自定义全局指令</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#自定义局部指令" class="sidebar-link">自定义局部指令</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#计算属性" class="sidebar-link">计算属性</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#过滤器" class="sidebar-link">过滤器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#自定义全局过滤器" class="sidebar-link">自定义全局过滤器</a></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#自定义局部过滤器" class="sidebar-link">自定义局部过滤器</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/front/vue/基础.html#过渡动画" class="sidebar-link">过渡动画</a></li></ul></li><li><a href="/study-base/front/vue/使用TS.html" class="sidebar-link">Vue中使用TS</a></li><li><a href="/study-base/front/vue/常见问题.html" class="sidebar-link">常见问题整理</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue基础"><a href="#vue基础" class="header-anchor">#</a> vue基础</h1> <h2 id="mvvm设计模式"><a href="#mvvm设计模式" class="header-anchor">#</a> MVVM设计模式</h2> <ul><li><p>在MVVM设计模式中有3部分组成</p></li> <li><p>M: Model        数据模型（保存数据，处理数据业务逻辑）</p></li> <li><p>V: View         视图（展示数据，与用户交互）</p></li> <li><p>VM: View Model  数据模型和视图的桥梁</p></li> <li><p>MVVM设计模式最大的特点就是支持数据的双向传递</p></li> <li><p>数据可以从   M-&gt; VM-&gt; V</p></li> <li><p>也可以从    V-&gt;VM-&gt;M</p></li> <li><p>Vue中MVVM的划分</p></li> <li><p>Vue其实是基于MVVM设计模式的</p></li> <li><p>被控制的区域：View</p></li> <li><p>Vue实例对象：View Model</p></li> <li><p>实例对象中的Data：Model</p></li> <li><p>Vue中数据的单项传递</p></li> <li><p>我们把&quot;数据&quot;交给&quot;Vue实例对象&quot;，Vue实例对象将数据交给&quot;界面&quot;</p></li> <li><p>Model -&gt; View Model -&gt; View</p></li></ul> <h2 id="数据双向传递"><a href="#数据双向传递" class="header-anchor">#</a> 数据双向传递</h2> <ul><li><p>数据双向绑定</p></li> <li><p>默认情况下Vue只支持数据单项传递</p></li> <li><p>vue中只支持在<code>&lt;input&gt; &lt;textarea&gt; &lt;select&gt;</code>中进行双向绑定</p></li></ul> <h2 id="vue中的常用指令"><a href="#vue中的常用指令" class="header-anchor">#</a> vue中的常用指令</h2> <p>指令就是Vue内部提供的一些自定义属性,
+这些属性中封装好了Vue内部实现的一些功能，
+只要使用这些指令就可以使用Vue实现的这些功能</p> <h3 id="v-once"><a href="#v-once" class="header-anchor">#</a> v-once</h3> <p>只渲染元素和组件一次，不会跟着数据的变化而变化</p> <h3 id="v-cloak"><a href="#v-cloak" class="header-anchor">#</a> v-cloak</h3> <ol><li>先将未绑定的数据展示到页面</li> <li>然后再根据模型中的数据和控制的区域生成绑定数据之后的HTML</li> <li>最后再将绑定数据之后的HTML渲染到界面上</li></ol> <ul><li><p>缺点：
+正是在最终的HTML被生成渲染之前会先显示模板内容，所以如果用户网络比较慢或者网页性能比较差，那么用户会看到模板内容</p></li> <li><p>解决问题</p></li></ul> <p>利用v-cloak配合<code>[v-cloak]:{display:none}</code>默认先隐藏未渲染的界面，
+等到生成HTML渲染成功之后再重新显示</p> <blockquote><p>作用：数据渲染后自动显示</p></blockquote> <h3 id="v-text"><a href="#v-text" class="header-anchor">#</a> v-text</h3> <blockquote><p>相当于innerText,会替换掉原来的内容，但是不会解析HTML代码</p></blockquote> <h3 id="v-html"><a href="#v-html" class="header-anchor">#</a> v-html</h3> <blockquote><p>相当于innerHTML，会替换掉原来的内容并且会解析HTML</p></blockquote> <h3 id="v-if"><a href="#v-if" class="header-anchor">#</a> v-if</h3> <blockquote><p>满足条件渲染元素，不满足就不渲染，如果条件不满足根本不会创建这个元素（重点）</p></blockquote> <h3 id="v-show"><a href="#v-show" class="header-anchor">#</a> v-show</h3> <blockquote><p>满足条件给当前元素一个display:block，不满足条件display:none，不会重复渲染当前的元素</p></blockquote> <h3 id="v-for"><a href="#v-for" class="header-anchor">#</a> v-for</h3> <blockquote><p>相当于JS中的for循环，可以根据数据多次渲染数据</p></blockquote> <blockquote><p>可以遍历 数组、字符串、对象、数字</p></blockquote> <h3 id="v-bind"><a href="#v-bind" class="header-anchor">#</a> v-bind</h3> <blockquote><p>在企业开发中想要给&quot;元素&quot;绑定数据，我们可以使用<code>v-bind</code>简写为一个<code>:</code>。</p></blockquote> <blockquote><p>在给元素的属性绑定值的时候只要是一个合法的JS表达式即可被转换成值输出</p></blockquote> <ul><li>在绑定数据中的class和style属性绑定数据，格式比较特殊</li></ul> <blockquote><p>不能直接进行复制，默认情况下<code>v-bind</code>先去Model中去查找。
+如果想让style中查找类名，就必须将类名放到数组中，放到数组中以后还需要去Model中查找，所以还需要对类名进行加<code>['类名']</code>。
+还可以通过对象来绑定类名</p></blockquote> <h3 id="v-on"><a href="#v-on" class="header-anchor">#</a> v-on</h3> <blockquote><p>给元素绑定监听事件，我们可以使用<code>v-on</code>可以简写为<code>@</code>。</p></blockquote> <blockquote><p>触发方法后会执行Vue中的<code>methods</code>查找函数的名称。</p></blockquote> <h4 id="修饰符"><a href="#修饰符" class="header-anchor">#</a> 修饰符</h4> <ul><li>.once 只触发一次回调</li> <li>.prevent 调用event.preventDefault()阻止默认的行为</li> <li>.self 只当事件是从侦听器绑定的元素本身触发时才触发回调(如果想让当前元素触发了当前的方法，才能执行，不然不会冒泡到外面)</li> <li>.stop 调用event.stopPropagation()。阻止事件冒泡行为</li> <li>.capture 添加事件侦听器时，使用capture模式（默认情况下是事件冒泡，如果想使用事件捕获，就需要使用capture）</li></ul> <h4 id="按键修饰符"><a href="#按键修饰符" class="header-anchor">#</a> 按键修饰符</h4> <ul><li>@keyup.enter 触发回车事件</li> <li>.tap 触发tap键</li> <li>.delete 触发删除键</li> <li>.esc 触发取消键</li> <li>.space 触发空格键</li> <li>.up 触发上键</li> <li>.down 触发下键</li> <li>.left 触发左键</li> <li>.right 触发右键</li></ul> <h5 id="自定义按键修饰符"><a href="#自定义按键修饰符" class="header-anchor">#</a> 自定义按键修饰符</h5> <ol><li><p>将keycode直接跟在@keyup.keycode码 自定义</p></li> <li><p>全局定义keycode按键修饰符 Vue.config.keyCode.f1 = 112</p></li></ol> <h2 id="自定义指令"><a href="#自定义指令" class="header-anchor">#</a> 自定义指令</h2> <h3 id="自定义全局指令"><a href="#自定义全局指令" class="header-anchor">#</a> 自定义全局指令</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 第一个参数：指定指令名称，不需要写v-</span>
+<span class="token comment">// 第二个参数：对象</span>
+<span class="token comment">// 存在生命周期:</span>
+<span class="token comment">/*
+bind: 指令被绑定到元素上的时候执行
+inserted: 绑定指令的元素被添加到父元素上的时候调用 
+*/</span>
+<span class="token comment">// 自定义指令实现修改文本颜色</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">&quot;color&quot;</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    <span class="token comment">// 被绑定指令的那个元素</span>
+    <span class="token function-variable function">bind</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 自定义指令实现聚焦</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">&quot;focus&quot;</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+<span class="token comment">// el指向当前的元素节点 </span>
+    <span class="token function-variable function">inserted</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+</code></pre></div><ul><li>给自定义指令传参数</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// `&lt;p v-color=&quot;red&quot;&gt;&lt;/p&gt;`</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">&quot;color&quot;</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    <span class="token comment">// 被绑定指令的那个元素</span>
+    <span class="token function-variable function">bind</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span>obj</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> obj<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="自定义局部指令"><a href="#自定义局部指令" class="header-anchor">#</a> 自定义局部指令</h3> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token operator">:</span><span class="token string">&quot;#app&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 自定义局部指令</span>
+    directives<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;color&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+          <span class="token function-variable function">bind</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span>obj</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+              el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> obj<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+</code></pre></div><h2 id="计算属性"><a href="#计算属性" class="header-anchor">#</a> 计算属性</h2> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token operator">:</span><span class="token string">&quot;#app&quot;</span><span class="token punctuation">,</span>
+    computed<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;msg&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>**函数和计算属性的区别: **</p> <ul><li>函数每次调用会都执行</li> <li>只要返回的结果没有发生变化，那么计算属性就只会被执行一次</li></ul> <p><strong>什么情况下使用计算属性，什么情况下使用函数：</strong></p> <p>由于计算属性会将返回的结果缓存起来，
+如果返回的数据不经常发生变化，
+那么使用计算属性会比使用函数的性能高</p> <h2 id="过滤器"><a href="#过滤器" class="header-anchor">#</a> 过滤器</h2> <p>过滤器是和计算属性一样都是用来处理数据的，但是过滤器一般用于格式化插入的文本数据</p> <h3 id="自定义全局过滤器"><a href="#自定义全局过滤器" class="header-anchor">#</a> 自定义全局过滤器</h3> <ol><li>定义：</li></ol> <p><code>Vue.filter(&quot;过滤器名称&quot;,过滤器处理函数)</code></p> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">&quot;testFilter&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// TODO 处理文本内容的逻辑</span>
+  <span class="token keyword">return</span> val<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="2"><li>使用过滤器：</li></ol> <ul><li></li> <li>:value=&quot;msg|过滤器名称&quot;</li></ul> <blockquote><p>使用过滤器的情况下：格式化文本推荐使用过滤器，不推荐使用函数和计算属性</p> <ul><li>过滤器只能在插值语法和v-bind中使用</li> <li>过滤器可以多个连续使用</li></ul></blockquote> <h3 id="自定义局部过滤器"><a href="#自定义局部过滤器" class="header-anchor">#</a> 自定义局部过滤器</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span><span class="token string">&quot;#app&quot;</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+      msg<span class="token operator">:</span><span class="token string">&quot;测试数据&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  filters<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token function">formatMsg</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment">// todo 处理文本内容的操作</span>
+      <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><blockquote><p>可以给过滤器传递参数</p></blockquote> <p><em><strong>补充js中的补零函数：</strong></em></p> <blockquote><p>方法用另一个字符串填充当前的字符串，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">padStart</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">&quot;0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>第一个参数填写需要填充的字符串的长度</li> <li>第二个参数填写需要填充的字符串</li></ul> <p><strong><font style="color:red;">只能填充字符串，若为数字先将数字转换为字符串，在进行填充</font></strong></p> <h2 id="过渡动画"><a href="#过渡动画" class="header-anchor">#</a> 过渡动画</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/22/2020, 9:00:32 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-base/front/vue/" class="prev router-link-active">
+        VUE开篇介绍
+      </a></span> <span class="next"><a href="/study-base/front/vue/使用TS.html">
+        Vue中使用TS
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.97121cf9.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/61.b42684ab.js" defer></script>
+  </body>
+</html>
