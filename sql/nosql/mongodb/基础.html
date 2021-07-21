@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mongo基础学习 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.c3530c40.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/80.73106b4f.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.ea8cc6af.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.fdeb7d9a.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.92b9de96.js"><link rel="prefetch" href="/study-base/assets/js/15.00364c12.js"><link rel="prefetch" href="/study-base/assets/js/16.d968f78b.js"><link rel="prefetch" href="/study-base/assets/js/17.f0f77404.js"><link rel="prefetch" href="/study-base/assets/js/18.5626c7b5.js"><link rel="prefetch" href="/study-base/assets/js/19.4e672c9d.js"><link rel="prefetch" href="/study-base/assets/js/20.7f66c62b.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.e5af4f91.js"><link rel="prefetch" href="/study-base/assets/js/23.cd2da2e1.js"><link rel="prefetch" href="/study-base/assets/js/24.464e8778.js"><link rel="prefetch" href="/study-base/assets/js/25.ff934865.js"><link rel="prefetch" href="/study-base/assets/js/26.fc9f8f34.js"><link rel="prefetch" href="/study-base/assets/js/27.dc2e78dd.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.515afd3a.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.93494fb6.js"><link rel="prefetch" href="/study-base/assets/js/32.ba3dbc02.js"><link rel="prefetch" href="/study-base/assets/js/33.4893cc01.js"><link rel="prefetch" href="/study-base/assets/js/34.5cec16ab.js"><link rel="prefetch" href="/study-base/assets/js/35.18f4e89e.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.8bed7a26.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.42fcfb12.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/44.0cf67f2b.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.c359e8a1.js"><link rel="prefetch" href="/study-base/assets/js/49.ccfd1221.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.d33d09af.js"><link rel="prefetch" href="/study-base/assets/js/51.2df54482.js"><link rel="prefetch" href="/study-base/assets/js/52.9a1dbb93.js"><link rel="prefetch" href="/study-base/assets/js/53.fb3d8bf3.js"><link rel="prefetch" href="/study-base/assets/js/54.31def870.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.c02bc3be.js"><link rel="prefetch" href="/study-base/assets/js/57.6784bbfc.js"><link rel="prefetch" href="/study-base/assets/js/58.c7d45b12.js"><link rel="prefetch" href="/study-base/assets/js/59.79b05b17.js"><link rel="prefetch" href="/study-base/assets/js/6.6b1e7b0f.js"><link rel="prefetch" href="/study-base/assets/js/60.a16c7727.js"><link rel="prefetch" href="/study-base/assets/js/61.b42684ab.js"><link rel="prefetch" href="/study-base/assets/js/62.0d4a9d21.js"><link rel="prefetch" href="/study-base/assets/js/63.8db233c8.js"><link rel="prefetch" href="/study-base/assets/js/64.b32ebb9e.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.e8d48f66.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.4e72b06b.js"><link rel="prefetch" href="/study-base/assets/js/69.e76eabec.js"><link rel="prefetch" href="/study-base/assets/js/7.40e57787.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.d5945200.js"><link rel="prefetch" href="/study-base/assets/js/72.1de0acf4.js"><link rel="prefetch" href="/study-base/assets/js/73.418648e1.js"><link rel="prefetch" href="/study-base/assets/js/74.125f765e.js"><link rel="prefetch" href="/study-base/assets/js/75.ad00d077.js"><link rel="prefetch" href="/study-base/assets/js/76.cab32a67.js"><link rel="prefetch" href="/study-base/assets/js/77.a4d26daa.js"><link rel="prefetch" href="/study-base/assets/js/78.5c7e5e90.js"><link rel="prefetch" href="/study-base/assets/js/79.8193bea5.js"><link rel="prefetch" href="/study-base/assets/js/8.981723df.js"><link rel="prefetch" href="/study-base/assets/js/81.674396a5.js"><link rel="prefetch" href="/study-base/assets/js/82.f0d32fa9.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.99ddbe05.js"><link rel="prefetch" href="/study-base/assets/js/85.49a73d30.js"><link rel="prefetch" href="/study-base/assets/js/86.d7b0b65d.js"><link rel="prefetch" href="/study-base/assets/js/87.f91f919e.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link router-link-active">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link router-link-active">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/sql/nosql/mongodb/" aria-current="page" class="sidebar-link">MongoDb基础</a></li><li><a href="/study-base/sql/nosql/mongodb/基础.html" class="active sidebar-link">mongo基础学习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#主键" class="sidebar-link">主键</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#写入文档" class="sidebar-link">写入文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#写入多个文档" class="sidebar-link">写入多个文档</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#查询" class="sidebar-link">查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#基本查询" class="sidebar-link">基本查询</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#比较操作符" class="sidebar-link">比较操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#其他运算符" class="sidebar-link">其他运算符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#逻辑操作符" class="sidebar-link">逻辑操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#字段操作符" class="sidebar-link">字段操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#数组操作符" class="sidebar-link">数组操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#运算操作符" class="sidebar-link">运算操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#文档游标" class="sidebar-link">文档游标</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#分页函数" class="sidebar-link">分页函数</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#排序函数" class="sidebar-link">排序函数</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#统计函数" class="sidebar-link">统计函数</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#更新" class="sidebar-link">更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#save方法" class="sidebar-link">save方法</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#update方法" class="sidebar-link">update方法</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#更新操作符-set" class="sidebar-link">更新操作符$set</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#更新操作符-unset" class="sidebar-link">更新操作符$unset</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#更新操作符-rename" class="sidebar-link">更新操作符$rename</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#inc和-mul更新操作符" class="sidebar-link">$inc和$mul更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#min和-max操作符" class="sidebar-link">$min和$max操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#addtoset数组更新操作符" class="sidebar-link">$addToSet数组更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#push数组更新操作符" class="sidebar-link">$push数组更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#pop数组更新操作符" class="sidebar-link">$pop数组更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#pull数组更新操作符" class="sidebar-link">$pull数组更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#pullall数组更新操作符" class="sidebar-link">$pullAll数组更新操作符</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#和-数组更新操作符" class="sidebar-link">$和$[]数组更新操作符</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/基础.html#删除文档" class="sidebar-link">删除文档</a></li></ul></li><li><a href="/study-base/sql/nosql/mongodb/聚合操作.html" class="sidebar-link">聚合操作</a></li><li><a href="/study-base/sql/nosql/mongodb/索引.html" class="sidebar-link">索引</a></li><li><a href="/study-base/sql/nosql/mongodb/数据模型.html" class="sidebar-link">数据模型</a></li><li><a href="/study-base/sql/nosql/mongodb/复制集.html" class="sidebar-link">复制集</a></li><li><a href="/study-base/sql/nosql/mongodb/分片.html" class="sidebar-link">mongo分片基础</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mongo基础学习"><a href="#mongo基础学习" class="header-anchor">#</a> mongo基础学习</h1> <h2 id="主键"><a href="#主键" class="header-anchor">#</a> 主键</h2> <ul><li><p>MongoDB的主键和MySQL一样，也是用于保证每一条数据的唯一性</p></li> <li><p>和MySQL不同的是,MongoDB中的主键无需明确指定</p> <ul><li>灭一个文档被添加到集合之后，MongoDB都会自动添加主键</li> <li>MongoDB中文档主键的名称叫做 _id</li></ul></li> <li><p>默认情况下文档主键是一个ObjectId类型数据</p> <ul><li>ObjectId类型是一个12个字节字符串
+<ul><li>4字节存储这条数据的时间戳</li> <li>3字节存储这条数据的是属于哪台电脑的标识符</li> <li>2字节存储这条数据的MongoDB进程id</li> <li>3字节是计数器</li></ul></li></ul></li> <li><p>为什么要使用ObjectId类型数据作为主键？</p></li></ul> <p>因为MongoDB是支持'横向扩展'的数据库</p> <ul><li><p>横向扩展是指'增加数据库服务器的台数'</p></li> <li><p>纵向扩展是指'增加数据库服务器的配置'</p></li> <li><p>是否可以指定其他类型作为主键</p> <ul><li>除了数组类型以外的其他类型都可以作为主键</li> <li>在使用文档类型作为主键的时候，一定要保证文档类型的一致性</li></ul></li></ul> <h2 id="写入文档"><a href="#写入文档" class="header-anchor">#</a> 写入文档</h2> <div class="language- extra-class"><pre class="language-text"><code>db.集合名称.insertOne(
+    文档,
+    {
+        writeConcern:安全级别
+    }
+)
+</code></pre></div><ul><li>安全级别</li></ul> <ul><li><p>用于判断数据是否写入成功</p></li> <li><p>安全级别越高，丢失数据风险越小，但是性能的消耗就越大</p></li> <li><p>默认情况下MongoDB会开启默认的安全级别，先不用关心</p></li></ul> <ul><li><p>如果插入的集合不存在就会自动创建一个集合</p></li> <li><p>其他写入数据的方式</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.save(
+    文档,
+    {
+        writeConcerb:文档安全级别
+    }
+
+)
+
+</code></pre></div><ul><li>insertOne和save的区别
+insertOne如果插入的主键重复会报错，而save会直接覆盖掉原来的主键数据</li></ul> <h3 id="写入多个文档"><a href="#写入多个文档" class="header-anchor">#</a> 写入多个文档</h3> <div class="language- extra-class"><pre class="language-text"><code>
+db.文档名称.insertMany(
+    [文档1,文档2],
+    {
+        writeConcerb:文档安全级别,
+        ordered:是否按顺序写入（默认是true）
+    }
+)
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果文档内存在重复的主键，按照顺序(<code>ordered:true</code>)去写入数据的时候，后面的文档数据就不会再写入</p> <p>不按照顺序写入(<code>ordered:false</code>)，后面的文档会被写入</p></div> <h2 id="查询"><a href="#查询" class="header-anchor">#</a> 查询</h2> <h3 id="基本查询"><a href="#基本查询" class="header-anchor">#</a> 基本查询</h3> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.find(
+    查询条件,
+    投影条件
+)
+
+</code></pre></div><p>查询条件：相当于Mysql中的where</p> <p>投影条件：相当于Mysql中按字段查询</p> <p>查询条件同时指定多个的情况下默认是and关系：</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.stu.find(
+    {name:'ls',age:17}
+)
+# 同时要满足name为ls并且age是17岁的才可以
+
+# 如果文档下面还有一个文档
+
+{
+    name:'ls',
+    age:99,
+    book:{
+        name:'html'
+    }
+}
+db.stu.find(
+{'book.name':'html'}
+}
+)
+
+</code></pre></div><p>投影条件：</p> <div class="language- extra-class"><pre class="language-text"><code># 不显示需要通过0和1区分
+
+db.stu.find({},{_id:0}) # 不显示_id
+
+</code></pre></div><ul><li><p>默认情况下所有字段都为1</p></li> <li><p>除了_id以外，其他的字段不能同时出现0和1</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>db.stu.find({},{_id:0,age:1,name:0}) # 错误的指定方式
+
+</code></pre></div><h3 id="比较操作符"><a href="#比较操作符" class="header-anchor">#</a> 比较操作符</h3> <p>和MySQL一样MongoDB中也支持比较操作符</p> <p>$eq:等于 / $ne:不等于</p> <p>$gt:大于 / $gte:大于等于</p> <p>$lt:小于 / $lte:小于等于</p> <p>默认情况下等于可以不需要写</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.find(
+    {字段名:{比较操作符:值}},
+    投影条件
+)
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点</p> <p>$ne 在做不等于字段中，如果某个字段不存在也算不等于</p></div> <h3 id="其他运算符"><a href="#其他运算符" class="header-anchor">#</a> 其他运算符</h3> <p>$in:匹配和任意指定值相等的文档</p> <p>$nin:匹配和任意指定值不相等的文档</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.find(
+    {
+        字段名称:{$in/$nin:[需要匹配的数组]}
+    }
+)
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点</p> <p>和$ne一样如果没有需要判断的字段，也算作满足条件</p></div> <h3 id="逻辑操作符"><a href="#逻辑操作符" class="header-anchor">#</a> 逻辑操作符</h3> <div class="language- extra-class"><pre class="language-text"><code>$not: 匹配条件不成立的文档
+
+{&lt;field&gt;:{$not:{条件}}}
+
+$and: 匹配条件同时成立的文档
+
+{$and:[{条件1},{条件2}]}
+
+$or: 匹配条件只满足其中一个的文档
+
+{$or:[{条件1},{条件2}]}
+
+$nor: 匹配条件不在两个条件之间的数据
+
+{$nor:[{条件1},{条件2}]}
+
+</code></pre></div><h3 id="字段操作符"><a href="#字段操作符" class="header-anchor">#</a> 字段操作符</h3> <p><code>$exists</code>: 查询包含某个字段的文档</p> <p><code>{字段名:{$exists:true}}</code> #一般配合前面的运算符使用</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.stu.find(
+    {
+        gender:{$ne:'男',$exists:true}
+    }
+)
+
+</code></pre></div><ul><li>一般配合<code>$ne/$nin/$nor/$not</code>来清理数据</li></ul> <p>$type: 查询某个字段类型的文档</p> <p><code>{字段名名:{$type:'string'}}</code></p> <h3 id="数组操作符"><a href="#数组操作符" class="header-anchor">#</a> 数组操作符</h3> <p><code>$all</code>: 匹配数组中包含所有指定查询值的文档</p> <p><code>{字段名:{$all:['数据1','数据2']}}</code></p> <p><code>$elemMatch</code> : 匹配数组中至少有一个能完全匹配所有的查询条件</p> <div class="language- extra-class"><pre class="language-text"><code>
+{class:'one',students:[{name:'ww',age:19},{name:'ls',age:18}]}
+{class:'two',students:[{name:'ww',age:18},{name:'ls',age:19}]}
+
+// 查询出 有名称叫ww,并且年龄是18岁的这个学生的班级
+
+db.stu.find({students:{$elemMatch:{name:'ww',age:18}}})
+
+</code></pre></div><h3 id="运算操作符"><a href="#运算操作符" class="header-anchor">#</a> 运算操作符</h3> <p><code>{字段名名称:{$regex:/pattern/,$options:'&lt;options&gt;'}}</code></p> <p><code>{字段名名称:{$regex:/pattern/}}</code></p> <div class="language- extra-class"><pre class="language-text"><code>{name:'zz'}
+{name:'Z12'}
+{name:'L12'}
+{name:'l2'}
+
+# 查询出所有姓z的人
+
+db.stu.find(
+    {name:{$regex:/^z/,$options:'i'}}
+)
+
+# 查询出所有是z或者l的人
+
+db.stu.find({
+    name:{$in:[/^z/i,/^l/i]}
+})
+
+</code></pre></div><h3 id="文档游标"><a href="#文档游标" class="header-anchor">#</a> 文档游标</h3> <h4 id="为什么学习前端要学习mongodb"><a href="#为什么学习前端要学习mongodb" class="header-anchor">#</a> 为什么学习前端要学习MongoDB</h4> <ul><li>MongoDB中原生就支持JavaScript,也就是我们可以直接在MongoDB中混入JS代码</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [];
+
+for(var i = 0;i&lt;100;i++){
+    arr.push({name:'sasa'+i})
+}
+
+db.stu.insertMany(arr);
+
+</code></pre></div><h4 id="什么是文档游标"><a href="#什么是文档游标" class="header-anchor">#</a> 什么是文档游标</h4> <p>我们在执行find方法后，find方法是有返回值的，find方法会返回一个文档游标（相当于C语言的指针）</p> <h4 id="文档游标的常用方法"><a href="#文档游标的常用方法" class="header-anchor">#</a> 文档游标的常用方法</h4> <p>hasNext()：是否还有下一个文档</p> <p>next(): 取出下一个文档</p> <p>forEach(): 依次取出所有文档</p> <div class="language- extra-class"><pre class="language-text"><code>
+var data = db.stu.find()
+
+data.forEach(printjson)
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>默认情况下通过文档游标遍历完成所有文档后，系统会在10分钟后自动关闭文档游标，
+如果不想自动关闭，我们可以通过noCursorTimeout()函数来保持游标一直有效</p> <div class="language- extra-class"><pre class="language-text"><code>var cursor = db.stu.find().noCursorTimeout()
+
+</code></pre></div><p>如果想手动关闭游标，我们也可以通过close函数手动关闭游标</p> <div class="language- extra-class"><pre class="language-text"><code>
+cursor.close()
+
+</code></pre></div></div> <h3 id="分页函数"><a href="#分页函数" class="header-anchor">#</a> 分页函数</h3> <p><code>cursor.limit(&lt;number&gt;)</code>:要取出多少个文档</p> <p><code>cursor.skip(&lt;number&gt;)</code>: 跳过几个文档开始取</p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <ul><li><p>我们可以直接在find方法后直接调用limit和skip方法</p></li> <li><p>MongoDB是支持链式调用的</p></li> <li><p>在链式操作中，无论skip在limit前面还是后面都会先执行skip</p></li></ul></div> <h3 id="排序函数"><a href="#排序函数" class="header-anchor">#</a> 排序函数</h3> <p>cursor.sort({field:ordering,...}) 按照指定的规则排序</p> <p>ordering 为1表示升序排序</p> <p>ordering 为-1表示降序排序</p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>默认情况下find只会返回100个文档</p> <p>sort函数如果和limit/skip一起使用的时候，无论sort函数写在前面还是后面，都会先执行sort函数</p></div> <h3 id="统计函数"><a href="#统计函数" class="header-anchor">#</a> 统计函数</h3> <p>cursor.count()</p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>count函数可以接收一个applySkipLimit参数，通过这个参数可以告诉MongoDB是否需要忽略Skip和Limit
+默认情况下取值为false，表示忽略Skip和Limit</p> <p>如果在使用find查询数据的时候，没有指定查询的条件，那么默认情况下在一台电脑上通过count函数统计的结果是准确的。</p> <p>如果现在是分布式（在多台电脑上的），那么通过count函数统计的结果就不一定准确了</p> <p>结论：只要需要使用count函数来统计文档个数，那么在查询的时候一定要加上条件，这样无论在什么样的环境下都是准确的了</p></div> <h2 id="更新"><a href="#更新" class="header-anchor">#</a> 更新</h2> <p>MongoDB中有三个常用的更新方法：save()/update()/findAndModify()</p> <h3 id="save方法"><a href="#save方法" class="header-anchor">#</a> save方法</h3> <p>save用于往集合里面添加一个新的文档或者覆盖文档</p> <p>当没有指定文档就创建一个文档，
+指定了_id存在就将当前的文档覆盖掉</p> <h3 id="update方法"><a href="#update方法" class="header-anchor">#</a> update方法</h3> <div class="language- extra-class"><pre class="language-text"><code>
+db.文档名称.update(
+    &lt;filter&gt;,# 筛选条件
+    &lt;update&gt;,# 新的内容
+    &lt;options&gt;# 额外配置
+)
+
+</code></pre></div><ol><li>通过update覆盖满足条件的数据</li></ol> <p>默认情况下如果<code>&lt;update&gt;</code>没有使用更新操作符，
+那么就会使用指定的内容覆盖符合条件的内容，
+如果只是想单纯的更新某个字段，需要使用更新操作符<code>$set</code></p> <ol start="2"><li>update方法，默认只更新满足条件的第一个文档</li></ol> <p>想要更新满足条件的文档
+需要在<code>&lt;options&gt;</code>进行配置如下</p> <div class="language- extra-class"><pre class="language-text"><code>
+{
+    // 批量更新
+    multi:true
+}
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果指定了multi，就必须在第二个参数中使用更新操作符</p></div> <ol start="3"><li>如果在使用update方法中，在第二个参数指定了_id，那么久必须保证和被更新文档的_id的取值一致
+若不一致就会报错</li></ol> <ul><li>开发技巧：在企业开发中需要使用update方法，那么就不要在第二个参数指定_id</li></ul> <h3 id="更新操作符-set"><a href="#更新操作符-set" class="header-anchor">#</a> 更新操作符$set</h3> <p>默认情况下update会使用新的文档覆盖掉旧文档</p> <p>如果我们不想覆盖而是仅仅想更新其中的某些字段</p> <p>那么我们就要使用update的更新操作符</p> <h4 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h4> <p>$set：更新或者新增字段，字段存在就是更新，字段不存在就是新增</p> <p>格式：<code>{$set:&lt;value1&gt;,...}</code></p> <div class="language- extra-class"><pre class="language-text"><code>
+db.stu.update(
+    {name:'zs'},{$set:{name:'ww'}}
+)
+
+</code></pre></div><h4 id="更新内嵌文档或数组"><a href="#更新内嵌文档或数组" class="header-anchor">#</a> 更新内嵌文档或数组</h4> <div class="language- extra-class"><pre class="language-text"><code>{name:'ls',book:{name:'html',price:12}}
+{name:'ww',infos:['html','js']}
+
+db.stu.update({name:'ls'},{$set:{'book.name':'js'}})
+
+db.stu.update({name:'ww'},{$set:{'infos.0':'vue'}}})
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果操作的字段存在，就是更新，如果操作的字段不存在，那么就是更新</p> <p>如果操作的是数组字段，如果操作的索引不存在，也会自动新增，如果被操作的索引前面没有数据，那么会自动用null来填充</p></div> <h3 id="更新操作符-unset"><a href="#更新操作符-unset" class="header-anchor">#</a> 更新操作符$unset</h3> <p>$unset: 删除字段</p> <p>格式：{$unset:{字段名名称:'',...}}</p> <ol><li>删除普通字段</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update({name:'ls'},{$unset:{scores:''}})
+
+# 如果使用unset删除某一个字段，那么后面赋值任何内容都不影响
+
+</code></pre></div><ol start="2"><li>删除文档字段中的字段</li></ol> <div class="language- extra-class"><pre class="language-text"><code>db.集合名称.update({name:'ls'},{$unset:{'book.name':''}})
+
+</code></pre></div><ol start="3"><li>删除数组中的字段</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update({name:'ls'},{$unset:{'infos.0':''}})
+
+# 如果删除的是数组字段元素，并不会修改数组的长度，而是用null来填充删除内容
+
+</code></pre></div><h3 id="更新操作符-rename"><a href="#更新操作符-rename" class="header-anchor">#</a> 更新操作符$rename</h3> <p>$rename : 重命名字段</p> <p>格式：{$rename:{字段名名称:新名称}}</p> <div class="language- extra-class"><pre class="language-text"><code># 普通文档修改
+db.集合名称.update({name:'zs'},{$rename:{name:'myName'}})
+# 文档下面的字段修改,取值必须写上层级关系
+db.集合名称.update({name:'zs'},{$rename:{'book.name':'book.bookRename'}})
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <ul><li><p>如果要操作的字段不存在不会做任何操作</p></li> <li><p>如果重命名之后的名称在表内已经存在了，那么已经存在的字段名称就会被删除：</p> <ul><li>底层的本质：先调用了$unset删除了原有的字段，再调用$set修改表字段名称</li></ul></li> <li><p>不能通过$rename更新操作符来操作数组</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>tags:[{name:'html','price':99},{name:'js',price:88}]
+
+db.集合名称.update({name:'test',{$rename:{'tags.0.name':'tags.0.book'}}})
+# 不允许这样操作的，会报错
+
+</code></pre></div></div> <ul><li>$rename使用技巧</li></ul> <ol><li>可以将外层的字段转移到内层的文档中</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update({name:'test',{$rename:{age:'book.age'}}})
+
+</code></pre></div><ol start="2"><li>可以将内层的文档转移到外层的文档中</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update({name:'test',{$rename:{'book.age':'age'}}})
+
+</code></pre></div><h3 id="inc和-mul更新操作符"><a href="#inc和-mul更新操作符" class="header-anchor">#</a> $inc和$mul更新操作符</h3> <p>$inc:更新字段值（增加或减少字段保存的值）
+格式：<code>{$inc:{&lt;field&gt;:正负整数}}</code></p> <p>$mul:更新字段值(乘以或除以字段保存的值)</p> <p>格式：<code>{$mul:{&lt;filed&gt;:整数为乘以，小数相当于除以}}</code></p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果操作的字段不存在，那么会自动更新</p> <p>如果$inc那么不仅仅会新增，还会将操作的赋值给新增的字段</p> <p>如果$mul那么只会新增字段，不会讲操作的赋值给新增的字段，他会用来填充0来填充</p> <p>$inc/$mul只能操作数值类型</p></div> <h3 id="min和-max操作符"><a href="#min和-max操作符" class="header-anchor">#</a> $min和$max操作符</h3> <ul><li>$min:比较保留更小的字段值</li></ul> <p>格式:<code>{$min:{&lt;field&gt;:条件}}</code></p> <ul><li>$max:比较保留更大的字段值</li></ul> <p>格式:<code>{$max:{&lt;field&gt;:条件}}</code></p> <div class="custom-block warning"><p class="custom-block-title">注意点</p> <p>如果操作的字段不存在，那么会自动增加，并且会将操作的值赋值给新增的字段</p> <p>和$inc/$mul不同，$min/$max不仅仅能操作数值类型的字段，只要是可以比较的字段都可以操作</p> <p>不是相同的数据类型也可以进行比较，同样可以更新</p></div> <p>内部顺序表(从小到大)：</p> <div class="language- extra-class"><pre class="language-text"><code>
+NULL,
+Numbers(ints,longs,doubles,decimals),
+Symbel String,
+Object,
+Array,
+BinData,
+ObjectId,
+Boolean,
+Date,
+Timestamp,
+Regular Expression
+
+</code></pre></div><h3 id="addtoset数组更新操作符"><a href="#addtoset数组更新操作符" class="header-anchor">#</a> $addToSet数组更新操作符</h3> <p>给数组中新增元素：</p> <p><code>{$addToSet:{&lt;field&gt;:值}}</code></p> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果操作的元素不存在，那么会自动新增，并将操作的值赋值给新增的数组字段</p> <p>$addToSet会自动去重，如果添加的元素已经存在了，那么就不会添加了</p> <p>如果往数组字段中添加的是文档类型，必须一模一样才会去重，顺序不一样也不会去重</p> <p>如果往数组字段中添加的是数组，那么一模一样才会去重</p> <p>如果往数组字段中添加的是数组，那么默认情况下会将整个数组作为一个元素添加进去，
+如果不想读一个整体添加进去，那么必须使用$each添加
+<code>{$addToSet:{tags:{$each:[1,2,3]}}}</code></p></div> <h3 id="push数组更新操作符"><a href="#push数组更新操作符" class="header-anchor">#</a> $push数组更新操作符</h3> <p>$push:向数组字段中添加元素(不去重)</p> <p>格式:<code>{$push:{tags:值}}</code></p> <h3 id="pop数组更新操作符"><a href="#pop数组更新操作符" class="header-anchor">#</a> $pop数组更新操作符</h3> <p>$pop : 从数组中删除元素</p> <p>格式：<code>{$pop:{&lt;field&gt;:&lt;1|-1&gt;,...}}</code></p> <p>1为删除最后一个元素</p> <p>-1为删除第一个元素</p> <div class="language- extra-class"><pre class="language-text"><code># 删除最后一个元素
+db.person.update({name:'zs'},{$pop:{tags:1}})
+# 删除第一个元素
+
+db.person.update({name:'zs'},{$pop:{tags:-1}})
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>通过$pop删除数组字段中的元素，哪怕数组已经删除空了，也会保留空的数组</p></div> <h3 id="pull数组更新操作符"><a href="#pull数组更新操作符" class="header-anchor">#</a> $pull数组更新操作符</h3> <p>$pull：从数组字段中删除特定的元素</p> <p>格式：{$pull:{$field:&lt;value|condition&gt;,...}}</p> <div class="language- extra-class"><pre class="language-text"><code>
+{
+name:'zs',
+books:[{name:'html',price:66}],
+tags:['1','2','html',['1','2']],
+info:['a','b','ac','bc','abc']
+}
+
+
+# 可以给一个具体的值
+db.集合名称.update({name:'zs'},{$pull:{tags:'html'}})
+
+# 可以使用正则表达式删除
+db.集合名称.update({name:'zs'},{$pull:{info:/^a/}})
+
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>如果删除的元素是一个数组，那么必须一模一样才能删除</p> <div class="language- extra-class"><pre class="language-text"><code># 删除失败，数组的顺序与文档中的数组不一致
+db.集合名称.update({name:'zs'},{$pull:{tags:['2','1']}})
+
+</code></pre></div><p>如果删除的元素是一个文档,那么不需要一模一样就能删除</p> <div class="language- extra-class"><pre class="language-text"><code># 可以删除成功
+db.集合名称.update({name:'zs'},{$pull:{books:{name:'html'}}})
+
+</code></pre></div><ul><li>文档删除成功的几项标准原则</li></ul> <ol><li>只要包含文档中的一个元素即可删除掉文档</li> <li>不需要保证百分百一致顺序可以颠倒</li></ol></div> <h3 id="pullall数组更新操作符"><a href="#pullall数组更新操作符" class="header-anchor">#</a> $pullAll数组更新操作符</h3> <p>$pullAll:从数组字段中批量删除特定元素</p> <p>格式：<code>{$pullAll:{&lt;field&gt;:[&lt;value1&gt;,&lt;value2&gt;,...]}}</code></p> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update({name:'zs'},{$pullAll:{tags:['1','2']}})
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>和$pull一样，如果删除的是数组字段中的数组元素，必须一模一样才能删除</p> <p>和$pull不一样，如果删除的是数组字段中的文档元素，也必须要一模一样才能删除</p></div> <h3 id="和-数组更新操作符"><a href="#和-数组更新操作符" class="header-anchor">#</a> $和$[]数组更新操作符</h3> <p>$ : 更新数组中满足条件的特定元素</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update(
+{
+name:'zs',tags:'html'
+},
+{
+$set:{'tag.$':'javaScript'}
+}
+)
+
+</code></pre></div><p>$[]: 更新数组中所有的元素为指定的值</p> <div class="language- extra-class"><pre class="language-text"><code>
+db.集合名称.update(
+{name:'zs'},
+{$set:{'tags.$[]':'info'}}
+)
+
+</code></pre></div><h2 id="删除文档"><a href="#删除文档" class="header-anchor">#</a> 删除文档</h2> <div class="language- extra-class"><pre class="language-text"><code>
+db.文档名称.remove(
+{name:'zs'},# 删除的筛选条件
+{} # 删除的配置项
+)
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>和update不通，remove方法默认删除所有满足条件的数据</p></div> <div class="language- extra-class"><pre class="language-text"><code># 只删除第一个满足条件的文档
+
+db.文档集合.remove({name:'zs'},{justOne:true})
+
+# 删除集合中的所有文档
+
+db.集合名称.remove({})
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/20/2020, 10:03:15 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-base/sql/nosql/mongodb/" class="prev router-link-active">
+        MongoDb基础
+      </a></span> <span class="next"><a href="/study-base/sql/nosql/mongodb/聚合操作.html">
+        聚合操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.c3530c40.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/80.73106b4f.js" defer></script>
+  </body>
+</html>

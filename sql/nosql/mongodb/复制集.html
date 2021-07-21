@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>复制集 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/study-basefavicon.ico">
+    <meta name="description" content="我的个人学习笔记">
+    <link rel="preload" href="/study-base/assets/css/0.styles.08a7fdb3.css" as="style"><link rel="preload" href="/study-base/assets/js/app.c3530c40.js" as="script"><link rel="preload" href="/study-base/assets/js/2.b18ce7de.js" as="script"><link rel="preload" href="/study-base/assets/js/81.674396a5.js" as="script"><link rel="prefetch" href="/study-base/assets/js/10.ea8cc6af.js"><link rel="prefetch" href="/study-base/assets/js/11.8a52ab3a.js"><link rel="prefetch" href="/study-base/assets/js/12.fdeb7d9a.js"><link rel="prefetch" href="/study-base/assets/js/13.bebb4061.js"><link rel="prefetch" href="/study-base/assets/js/14.92b9de96.js"><link rel="prefetch" href="/study-base/assets/js/15.00364c12.js"><link rel="prefetch" href="/study-base/assets/js/16.d968f78b.js"><link rel="prefetch" href="/study-base/assets/js/17.f0f77404.js"><link rel="prefetch" href="/study-base/assets/js/18.5626c7b5.js"><link rel="prefetch" href="/study-base/assets/js/19.4e672c9d.js"><link rel="prefetch" href="/study-base/assets/js/20.7f66c62b.js"><link rel="prefetch" href="/study-base/assets/js/21.62d9e51f.js"><link rel="prefetch" href="/study-base/assets/js/22.e5af4f91.js"><link rel="prefetch" href="/study-base/assets/js/23.cd2da2e1.js"><link rel="prefetch" href="/study-base/assets/js/24.464e8778.js"><link rel="prefetch" href="/study-base/assets/js/25.ff934865.js"><link rel="prefetch" href="/study-base/assets/js/26.fc9f8f34.js"><link rel="prefetch" href="/study-base/assets/js/27.dc2e78dd.js"><link rel="prefetch" href="/study-base/assets/js/28.81329f84.js"><link rel="prefetch" href="/study-base/assets/js/29.6fe50f35.js"><link rel="prefetch" href="/study-base/assets/js/3.515afd3a.js"><link rel="prefetch" href="/study-base/assets/js/30.e7cb7af5.js"><link rel="prefetch" href="/study-base/assets/js/31.93494fb6.js"><link rel="prefetch" href="/study-base/assets/js/32.ba3dbc02.js"><link rel="prefetch" href="/study-base/assets/js/33.4893cc01.js"><link rel="prefetch" href="/study-base/assets/js/34.5cec16ab.js"><link rel="prefetch" href="/study-base/assets/js/35.18f4e89e.js"><link rel="prefetch" href="/study-base/assets/js/36.4a38792c.js"><link rel="prefetch" href="/study-base/assets/js/37.84f47308.js"><link rel="prefetch" href="/study-base/assets/js/38.45f7236b.js"><link rel="prefetch" href="/study-base/assets/js/39.15382fe0.js"><link rel="prefetch" href="/study-base/assets/js/4.8bed7a26.js"><link rel="prefetch" href="/study-base/assets/js/40.07acd6e9.js"><link rel="prefetch" href="/study-base/assets/js/41.22959966.js"><link rel="prefetch" href="/study-base/assets/js/42.42fcfb12.js"><link rel="prefetch" href="/study-base/assets/js/43.f7d50198.js"><link rel="prefetch" href="/study-base/assets/js/44.0cf67f2b.js"><link rel="prefetch" href="/study-base/assets/js/45.6a0ef3d0.js"><link rel="prefetch" href="/study-base/assets/js/46.53cd3d73.js"><link rel="prefetch" href="/study-base/assets/js/47.145417c8.js"><link rel="prefetch" href="/study-base/assets/js/48.c359e8a1.js"><link rel="prefetch" href="/study-base/assets/js/49.ccfd1221.js"><link rel="prefetch" href="/study-base/assets/js/5.40fe6f19.js"><link rel="prefetch" href="/study-base/assets/js/50.d33d09af.js"><link rel="prefetch" href="/study-base/assets/js/51.2df54482.js"><link rel="prefetch" href="/study-base/assets/js/52.9a1dbb93.js"><link rel="prefetch" href="/study-base/assets/js/53.fb3d8bf3.js"><link rel="prefetch" href="/study-base/assets/js/54.31def870.js"><link rel="prefetch" href="/study-base/assets/js/55.4e9500bc.js"><link rel="prefetch" href="/study-base/assets/js/56.c02bc3be.js"><link rel="prefetch" href="/study-base/assets/js/57.6784bbfc.js"><link rel="prefetch" href="/study-base/assets/js/58.c7d45b12.js"><link rel="prefetch" href="/study-base/assets/js/59.79b05b17.js"><link rel="prefetch" href="/study-base/assets/js/6.6b1e7b0f.js"><link rel="prefetch" href="/study-base/assets/js/60.a16c7727.js"><link rel="prefetch" href="/study-base/assets/js/61.b42684ab.js"><link rel="prefetch" href="/study-base/assets/js/62.0d4a9d21.js"><link rel="prefetch" href="/study-base/assets/js/63.8db233c8.js"><link rel="prefetch" href="/study-base/assets/js/64.b32ebb9e.js"><link rel="prefetch" href="/study-base/assets/js/65.6ba92b20.js"><link rel="prefetch" href="/study-base/assets/js/66.e8d48f66.js"><link rel="prefetch" href="/study-base/assets/js/67.77990ab1.js"><link rel="prefetch" href="/study-base/assets/js/68.4e72b06b.js"><link rel="prefetch" href="/study-base/assets/js/69.e76eabec.js"><link rel="prefetch" href="/study-base/assets/js/7.40e57787.js"><link rel="prefetch" href="/study-base/assets/js/70.c38bfebf.js"><link rel="prefetch" href="/study-base/assets/js/71.d5945200.js"><link rel="prefetch" href="/study-base/assets/js/72.1de0acf4.js"><link rel="prefetch" href="/study-base/assets/js/73.418648e1.js"><link rel="prefetch" href="/study-base/assets/js/74.125f765e.js"><link rel="prefetch" href="/study-base/assets/js/75.ad00d077.js"><link rel="prefetch" href="/study-base/assets/js/76.cab32a67.js"><link rel="prefetch" href="/study-base/assets/js/77.a4d26daa.js"><link rel="prefetch" href="/study-base/assets/js/78.5c7e5e90.js"><link rel="prefetch" href="/study-base/assets/js/79.8193bea5.js"><link rel="prefetch" href="/study-base/assets/js/8.981723df.js"><link rel="prefetch" href="/study-base/assets/js/80.73106b4f.js"><link rel="prefetch" href="/study-base/assets/js/82.f0d32fa9.js"><link rel="prefetch" href="/study-base/assets/js/83.69b57cf2.js"><link rel="prefetch" href="/study-base/assets/js/84.99ddbe05.js"><link rel="prefetch" href="/study-base/assets/js/85.49a73d30.js"><link rel="prefetch" href="/study-base/assets/js/86.d7b0b65d.js"><link rel="prefetch" href="/study-base/assets/js/87.f91f919e.js"><link rel="prefetch" href="/study-base/assets/js/88.99572bbd.js"><link rel="prefetch" href="/study-base/assets/js/9.f5b18ab0.js">
+    <link rel="stylesheet" href="/study-base/assets/css/0.styles.08a7fdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-base/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link router-link-active">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-base/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="杂项" class="dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/mac/" class="nav-link">
+  macbook
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/front/basics/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/study-base/front/basics/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/study-base/front/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/typeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/uniApp/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/front/react/" class="nav-link">
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端学习" class="dropdown-title"><span class="title">后端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/after/c/" class="nav-link">
+  C语言
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/php/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/node/" class="nav-link">
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/after/leetcode/" class="nav-link">
+  算法题目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-base/sql/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/study-base/sql/orcale/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><h4>
+          nosql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/study-base/sql/nosql/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/study-base/sql/nosql/mongodb/" class="nav-link router-link-active">
+  mongoDB
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://www.28yanyu.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术小窝
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study-base/sql/nosql/mongodb/" aria-current="page" class="sidebar-link">MongoDb基础</a></li><li><a href="/study-base/sql/nosql/mongodb/基础.html" class="sidebar-link">mongo基础学习</a></li><li><a href="/study-base/sql/nosql/mongodb/聚合操作.html" class="sidebar-link">聚合操作</a></li><li><a href="/study-base/sql/nosql/mongodb/索引.html" class="sidebar-link">索引</a></li><li><a href="/study-base/sql/nosql/mongodb/数据模型.html" class="sidebar-link">数据模型</a></li><li><a href="/study-base/sql/nosql/mongodb/复制集.html" class="active sidebar-link">复制集</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/复制集.html#特点" class="sidebar-link">特点</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/复制集.html#复制集选举的规则" class="sidebar-link">复制集选举的规则</a></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/复制集.html#复制集同步规则" class="sidebar-link">复制集同步规则</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/复制集.html#在复制集中如何保证所有节点保存的数据都相同" class="sidebar-link">在复制集中如何保证所有节点保存的数据都相同</a></li></ul></li><li class="sidebar-sub-header"><a href="/study-base/sql/nosql/mongodb/复制集.html#搭建复制集" class="sidebar-link">搭建复制集</a></li></ul></li><li><a href="/study-base/sql/nosql/mongodb/分片.html" class="sidebar-link">mongo分片基础</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="复制集"><a href="#复制集" class="header-anchor">#</a> 复制集</h1> <p>如果所有的数据都存在一台MongoDB服务器，会存在什么问题？</p> <ol><li>不具备高可用性，一旦这台MongoDB服务器宕机了，那么用户就无法继续使用了</li> <li>不具备数据安全性，一旦MongoDB服务器坏掉了，那么用户的数据丢失了</li> <li>不能对数据进行分流，不能采用就近的原则进行访问</li></ol> <p>如何解决上述的问题？</p> <p>在MongoDB中提供了一个叫做复制集的东西，我们可以通过复制集来解决上述问题</p> <p>什么是复制集？</p> <p>复制集就是将多台保存了相同内容的MongoDB服务器组成一个集群，我们就称为复制集</p> <p>什么是复制集的节点？</p> <p>在复制集中每台MongoDB服务器都是一个节点</p> <h2 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h2> <ol><li><p>在一个复制集中最多只能有50个节点</p></li> <li><p>在复制集中必须有一个主节点</p> <ul><li>什么是主节点
+在复制集中，只有一个节点可以同时读写数据，那么这个节点我们称之为主节点</li></ul></li> <li><p>在复制集中除了主节点以外的节点，我们都称之为副节点</p> <ul><li>什么是副节点
+在复制集中副节点只能读取数据，不能写入数据，那么这个节点我们称之为副节点</li></ul></li> <li><p>在复制集中，节点之间，每隔两秒就会相互发送心跳请求
+为了相互检查有没有节点出现了问题，如果某一个节点10秒还没有响应其他节点的请求，那么就会视为这个节点出现了问题</p></li> <li><p>如果主节点出现了问题（宕机、坏掉），副节点就会自动发起投票，重新选举主节点
+因为在复制集中只有主节点可以写入数据，那么主节点挂了，就以为着不能写入数据了，
+所以需要重新从其他的副节点中选举出一个作为主节点，这样才能保证既能写入也能读取数据</p></li></ol> <h2 id="复制集选举的规则"><a href="#复制集选举的规则" class="header-anchor">#</a> 复制集选举的规则</h2> <ol><li><p>发起选举的前提条件</p> <ul><li>副节点发送心跳请求给主节点10秒之后还没有收到响应，这个时候副节点
+就会认为主节点已经挂掉了，就会重新发起选举请求</li></ul></li> <li><p>在复制集中每一个节点都有一个选举计数器</p></li> <li><p>在复制集中发起选举的节点我们称之为候选节点</p></li> <li><p>开始选举</p> <ul><li>候选节点会先给自己的选举计数器+1</li> <li>候选节点会给所有的节点发起选举请求
+并将自己的选举计数器的值一天同时发送过去</li> <li>其他节点接收到选举请求之后会先利用选举请求中计数器的值更新自己的值</li> <li>更新完计数器的值之后，会对比自己保存的数据和候选节点的数据，谁的数据比较完整
+如果自己的数据比候选节点完整，那么会透出反对票
+如果自己的数据没有候选节点的数据完整，那么就会投出同意票</li> <li>所有的节点优盘完成之后，如果超过半数同意
+那么候选节点就自动变为主节点
+如果投票完成之后同意票的票数没有超过半数
+那么其他的副节点就会重新再次发起选举
+直到有一个节点有超过半数的节点同意为止</li></ul> <p>如果某些节点挂掉了，不能参与投票，那么默认就是反对票</p></li></ol> <div class="custom-block warning"><p class="custom-block-title">注意点：</p> <p>在复制集中参与投票的节点最多只能有7个，由于需要有超过半数的节点同意才能成为主节点
+所以在创建复制集的时候，最少需要3个节点</p> <p>原因：由于需要有超过半数的节点同意才能成为主节点，所以在复制集中我们一般会创建奇数个节点</p></div> <ul><li>触发选举的其他条件</li></ul> <ol><li><p>初始化复制集时，会自动触发选举</p></li> <li><p>有新节点加入的时候，会自动选举</p></li> <li><p>当前主节点挂掉的时候，会自动选举</p></li></ol> <h2 id="复制集同步规则"><a href="#复制集同步规则" class="header-anchor">#</a> 复制集同步规则</h2> <h3 id="在复制集中如何保证所有节点保存的数据都相同"><a href="#在复制集中如何保证所有节点保存的数据都相同" class="header-anchor">#</a> 在复制集中如何保证所有节点保存的数据都相同</h3> <ol><li>初始化同步</li></ol> <ul><li>当有一个新的节点加入到复制集之后，就会自动进行初始化同步
+初始化同步会将主节点中所有的数据库、集合、文档、索引都拷贝一份给新的节点</li></ul> <ol start="2"><li>同步写库记录</li></ol> <ul><li>在每一个MongoDB服务器上都有一个local数据库，这个数据库中有一个oplog集合，这个集合中就保存了当前服务器所有的操作
+执行完初始化同步之后，副节点会定期的同步写库记录，会定期执行写库记录</li></ul> <h2 id="搭建复制集"><a href="#搭建复制集" class="header-anchor">#</a> 搭建复制集</h2> <ol><li><p>下载地址：<a href="https://www.mongodb.com/try/download/community" title="MongoDB下载地址" target="_blank" rel="noopener noreferrer">MongoDB下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>解压MongoDB安装包</p></li> <li><p>在安装目录下新建data/conf/log文件夹</p></li> <li><p>在conf文件夹下新创建mongod.conf，配置文件如下</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>storage:
+    dbPath: /Users/zhuzhengjian/Desktop/huanjing/mongo1/data
+    journal:
+        enabled: true
+systemLog:
+    destination: file
+    path: /Users/zhuzhengjian/Desktop/huanjing/mongo1/log/mongodb.log
+    logAppend: true
+net:
+    port: 27018
+    bindIp: 127.0.0.1
+replication:
+    replSetName: mongotest
+  
+</code></pre></div><p>其他电脑做相同的配置即可</p> <ol start="5"><li>启动多个mongod并使用当前文件夹下面的配置</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code>
+./mongod -f <span class="token punctuation">..</span>/conf/mongod.conf
+
+</code></pre></div><ol start="6"><li>测试连接所有mongo数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>mongo --host 127.0.0.1 --port 27018
+mongo --host 127.0.0.1 --port 27019
+mongo --host 127.0.0.1 --port 27020
+</code></pre></div><ol start="7"><li>在任何一个mongo复制集中启动mongoDB，配置复制集</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+rs.initiate({
+ _id:'mongotest', 
+members:[ 
+{_id:0,host:'127.0.0.1:27018'}, 
+{_id:1,host:'127.0.0.1:27019'}, 
+{_id:2,host:'127.0.0.1:27020'}] 
+})
+
+</code></pre></div><ul><li>其他配置项说明
+<ol><li>_id	        整数	节点的唯一标识。</li> <li>host	        字符串	节点的IP地址，包含端口号。</li> <li>arbiterOnly	布尔值	是否为投票节点，默认是false。是设置投票(选举)节点有关的参数</li> <li>priority	    整数	选举为主节点的权值，默认是1，范围0-1000。</li> <li>hidden	    布尔值	是否隐藏，默认false，是设置隐藏节点有关的参数。</li> <li>votes	    整数	投票数，默认为1，取值是0或1，是设置”投票“节点有关的参数。</li> <li>slaveDelay	整数	延时复制，是设置延时节点有关的参数。单位秒(s)</li></ol></li></ul> <ol start="8"><li>执行完成后查看当前复制集的状态</li></ol> <div class="language- extra-class"><pre class="language-text"><code>rs.status()
+
+### 状态信息 ###
+{
+	&quot;set&quot; : &quot;mongotest&quot;,
+	&quot;date&quot; : ISODate(&quot;2020-08-22T05:10:03.213Z&quot;),
+	&quot;myState&quot; : 1,
+	&quot;term&quot; : NumberLong(1),
+	&quot;syncSourceHost&quot; : &quot;&quot;,
+	&quot;syncSourceId&quot; : -1,
+	&quot;heartbeatIntervalMillis&quot; : NumberLong(2000),
+	&quot;majorityVoteCount&quot; : 2,
+	&quot;writeMajorityCount&quot; : 2,
+	&quot;votingMembersCount&quot; : 3,
+	&quot;writableVotingMembersCount&quot; : 3,
+	&quot;optimes&quot; : {
+		&quot;lastCommittedOpTime&quot; : {
+			&quot;ts&quot; : Timestamp(1598073002, 1),
+			&quot;t&quot; : NumberLong(1)
+		},
+		&quot;lastCommittedWallTime&quot; : ISODate(&quot;2020-08-22T05:10:02.079Z&quot;),
+		&quot;readConcernMajorityOpTime&quot; : {
+			&quot;ts&quot; : Timestamp(1598073002, 1),
+			&quot;t&quot; : NumberLong(1)
+		},
+		&quot;readConcernMajorityWallTime&quot; : ISODate(&quot;2020-08-22T05:10:02.079Z&quot;),
+		&quot;appliedOpTime&quot; : {
+			&quot;ts&quot; : Timestamp(1598073002, 1),
+			&quot;t&quot; : NumberLong(1)
+		},
+		&quot;durableOpTime&quot; : {
+			&quot;ts&quot; : Timestamp(1598073002, 1),
+			&quot;t&quot; : NumberLong(1)
+		},
+		&quot;lastAppliedWallTime&quot; : ISODate(&quot;2020-08-22T05:10:02.079Z&quot;),
+		&quot;lastDurableWallTime&quot; : ISODate(&quot;2020-08-22T05:10:02.079Z&quot;)
+	},
+	&quot;lastStableRecoveryTimestamp&quot; : Timestamp(1598072982, 1),
+	&quot;electionCandidateMetrics&quot; : {
+		&quot;lastElectionReason&quot; : &quot;electionTimeout&quot;,
+		&quot;lastElectionDate&quot; : ISODate(&quot;2020-08-22T05:09:41.971Z&quot;),
+		&quot;electionTerm&quot; : NumberLong(1),
+		&quot;lastCommittedOpTimeAtElection&quot; : {
+			&quot;ts&quot; : Timestamp(0, 0),
+			&quot;t&quot; : NumberLong(-1)
+		},
+		&quot;lastSeenOpTimeAtElection&quot; : {
+			&quot;ts&quot; : Timestamp(1598072970, 1),
+			&quot;t&quot; : NumberLong(-1)
+		},
+		&quot;numVotesNeeded&quot; : 2,
+		&quot;priorityAtElection&quot; : 1,
+		&quot;electionTimeoutMillis&quot; : NumberLong(10000),
+		&quot;numCatchUpOps&quot; : NumberLong(0),
+		&quot;newTermStartDate&quot; : ISODate(&quot;2020-08-22T05:09:42.041Z&quot;),
+		&quot;wMajorityWriteAvailabilityDate&quot; : ISODate(&quot;2020-08-22T05:09:42.695Z&quot;)
+	},
+	&quot;members&quot; : [
+		{
+			&quot;_id&quot; : 0,
+			&quot;name&quot; : &quot;127.0.0.1:27018&quot;,
+			&quot;health&quot; : 1,
+			&quot;state&quot; : 1,
+			&quot;stateStr&quot; : &quot;PRIMARY&quot;,
+			&quot;uptime&quot; : 685,
+			&quot;optime&quot; : {
+				&quot;ts&quot; : Timestamp(1598073002, 1),
+				&quot;t&quot; : NumberLong(1)
+			},
+			&quot;optimeDate&quot; : ISODate(&quot;2020-08-22T05:10:02Z&quot;),
+			&quot;syncSourceHost&quot; : &quot;&quot;,
+			&quot;syncSourceId&quot; : -1,
+			&quot;infoMessage&quot; : &quot;&quot;,
+			&quot;electionTime&quot; : Timestamp(1598072981, 1),
+			&quot;electionDate&quot; : ISODate(&quot;2020-08-22T05:09:41Z&quot;),
+			&quot;configVersion&quot; : 1,
+			&quot;configTerm&quot; : 1,
+			&quot;self&quot; : true,
+			&quot;lastHeartbeatMessage&quot; : &quot;&quot;
+		},
+		{
+			&quot;_id&quot; : 1,
+			&quot;name&quot; : &quot;127.0.0.1:27019&quot;,
+			&quot;health&quot; : 1,
+			&quot;state&quot; : 2,
+			&quot;stateStr&quot; : &quot;SECONDARY&quot;,
+			&quot;uptime&quot; : 32,
+			&quot;optime&quot; : {
+				&quot;ts&quot; : Timestamp(1598072982, 5),
+				&quot;t&quot; : NumberLong(1)
+			},
+			&quot;optimeDurable&quot; : {
+				&quot;ts&quot; : Timestamp(1598072982, 5),
+				&quot;t&quot; : NumberLong(1)
+			},
+			&quot;optimeDate&quot; : ISODate(&quot;2020-08-22T05:09:42Z&quot;),
+			&quot;optimeDurableDate&quot; : ISODate(&quot;2020-08-22T05:09:42Z&quot;),
+			&quot;lastHeartbeat&quot; : ISODate(&quot;2020-08-22T05:10:02.029Z&quot;),
+			&quot;lastHeartbeatRecv&quot; : ISODate(&quot;2020-08-22T05:10:03.055Z&quot;),
+			&quot;pingMs&quot; : NumberLong(0),
+			&quot;lastHeartbeatMessage&quot; : &quot;&quot;,
+			&quot;syncSourceHost&quot; : &quot;127.0.0.1:28018&quot;,
+			&quot;syncSourceId&quot; : 0,
+			&quot;infoMessage&quot; : &quot;&quot;,
+			&quot;configVersion&quot; : 1,
+			&quot;configTerm&quot; : 1
+		},
+		{
+			&quot;_id&quot; : 2,
+			&quot;name&quot; : &quot;127.0.0.1:27020&quot;,
+			&quot;health&quot; : 1,
+			&quot;state&quot; : 2,
+			&quot;stateStr&quot; : &quot;SECONDARY&quot;,
+			&quot;uptime&quot; : 32,
+			&quot;optime&quot; : {
+				&quot;ts&quot; : Timestamp(1598072982, 5),
+				&quot;t&quot; : NumberLong(1)
+			},
+			&quot;optimeDurable&quot; : {
+				&quot;ts&quot; : Timestamp(1598072982, 5),
+				&quot;t&quot; : NumberLong(1)
+			},
+			&quot;optimeDate&quot; : ISODate(&quot;2020-08-22T05:09:42Z&quot;),
+			&quot;optimeDurableDate&quot; : ISODate(&quot;2020-08-22T05:09:42Z&quot;),
+			&quot;lastHeartbeat&quot; : ISODate(&quot;2020-08-22T05:10:02.028Z&quot;),
+			&quot;lastHeartbeatRecv&quot; : ISODate(&quot;2020-08-22T05:10:03.055Z&quot;),
+			&quot;pingMs&quot; : NumberLong(0),
+			&quot;lastHeartbeatMessage&quot; : &quot;&quot;,
+			&quot;syncSourceHost&quot; : &quot;127.0.0.1:28018&quot;,
+			&quot;syncSourceId&quot; : 0,
+			&quot;infoMessage&quot; : &quot;&quot;,
+			&quot;configVersion&quot; : 1,
+			&quot;configTerm&quot; : 1
+		}
+	],
+	&quot;ok&quot; : 1,
+	&quot;$clusterTime&quot; : {
+		&quot;clusterTime&quot; : Timestamp(1598073002, 1),
+		&quot;signature&quot; : {
+			&quot;hash&quot; : BinData(0,&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;),
+			&quot;keyId&quot; : NumberLong(0)
+		}
+	},
+	&quot;operationTime&quot; : Timestamp(1598073002, 1)
+}
+</code></pre></div><ol start="9"><li>在副节点读取<code>rs.slaveOk()</code></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/22/2020, 6:43:39 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-base/sql/nosql/mongodb/数据模型.html" class="prev">
+        数据模型
+      </a></span> <span class="next"><a href="/study-base/sql/nosql/mongodb/分片.html">
+        mongo分片基础
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-base/assets/js/app.c3530c40.js" defer></script><script src="/study-base/assets/js/2.b18ce7de.js" defer></script><script src="/study-base/assets/js/81.674396a5.js" defer></script>
+  </body>
+</html>
